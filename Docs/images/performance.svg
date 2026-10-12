@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="440" viewBox="0 0 1100 440" role="img" aria-labelledby="title desc">
+  <title id="title">SiliconPlayer 0.6.0 日常版资源实测</title>
+  <desc id="desc">最终 core build 13 r3。在 Apple M6、16 GB、macOS 27.0.1 上窗口播放 SDR 素材。4K H.264 60fps 约60秒：平均CPU12.65%，稳定物理足迹峰值359.10 MiB，解码和渲染零丢帧。4K HEVC Main10 约61秒：平均CPU16.96%，稳定物理足迹峰值376.08 MiB，零丢帧。CPU100%约等于一个核心，物理足迹不是RSS。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111c2f"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="440" rx="24" fill="url(#bg)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',Arial,sans-serif">
+    <text x="38" y="54" fill="#f8fafc" font-size="26" font-weight="700">4K 播放 · 当前成品实测</text>
+    <text x="38" y="83" fill="#94a3b8" font-size="16">0.6.0 core build 13 r3 · 窗口播放 SDR · 2026-10-12</text>
+    <rect x="38" y="110" width="1024" height="208" rx="16" fill="#172339" stroke="#2b3d57"/>
+    <text x="60" y="146" fill="#e2e8f0" font-size="18" font-weight="600">4K H.264 60fps · 约 60 秒</text>
+    <rect x="861" y="129" width="174" height="28" rx="14" fill="#143c35"/>
+    <text x="948" y="149" fill="#86efac" font-size="14" text-anchor="middle">解码 / 渲染 零丢帧</text>
+    <line x1="390" y1="175" x2="390" y2="287" stroke="#304158"/>
+    <line x1="730" y1="175" x2="730" y2="287" stroke="#304158"/>
+    <text x="60" y="201" fill="#94a3b8" font-size="16">平均 CPU</text>
+    <text x="60" y="253" fill="#60a5fa" font-size="42" font-weight="700">12.65<tspan fill="#94a3b8" font-size="24">%</tspan></text>
+    <text x="60" y="284" fill="#b3c0d2" font-size="14">100% 约等于一个核心</text>
+    <text x="416" y="201" fill="#94a3b8" font-size="16">稳定物理足迹峰值</text>
+    <text x="416" y="253" fill="#c4b5fd" font-size="42" font-weight="700">359.10<tspan fill="#94a3b8" font-size="20"> MiB</tspan></text>
+    <text x="416" y="284" fill="#b3c0d2" font-size="14">进程 RSS 峰值 445.95 MiB</text>
+    <text x="756" y="201" fill="#94a3b8" font-size="16">最大稳定音画差</text>
+    <text x="756" y="253" fill="#5eead4" font-size="42" font-weight="700">6.01<tspan fill="#94a3b8" font-size="24"> ms</tspan></text>
+    <text x="756" y="284" fill="#b3c0d2" font-size="14">真实应用与进程采样</text>
+    <text x="38" y="352" fill="#cbd5e1" font-size="16">4K HEVC Main10 · 约 61 秒</text>
+    <text x="392" y="352" fill="#cbd5e1" font-size="16">CPU 16.96%</text>
+    <text x="607" y="352" fill="#cbd5e1" font-size="16">物理足迹 376.08 MiB</text>
+    <text x="873" y="352" fill="#86efac" font-size="16">解码 / 渲染零丢帧</text>
+    <line x1="38" y1="373" x2="1062" y2="373" stroke="#26364e"/>
+    <text x="38" y="402" fill="#94a3b8" font-size="14">Apple M6 / 16 GB / macOS 27.0.1 · 物理足迹与 RSS 为不同指标 · 数据仅描述本次测试条件</text>
+  </g>
+</svg>

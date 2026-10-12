@@ -1,0 +1,796 @@
+{
+  "schema": 1,
+  "status": "draft_inputs_not_executed",
+  "profileID": "zipformer-zh-int8-2025-06-30/sherpa-1.13.8/cpu2/spcm-v1",
+  "pcmSourceSHA256": "b5c433c24d2ef4605b71ecd0f394f2fb6f22eda3fc8b0b3ed263e4ca76a79d43",
+  "recognizerSourceSHA256": "3fe36bf2c56766eca53ad5cbc539e34929fadd7623aa86dfa346d025864e6388",
+  "protocolSHA256": "2a92a61d13a0daa303c0bfd4f5709d0b9f4ecdbc732bfbdf0a915d9cbeaa1582",
+  "acquisitionFiles": [
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/joiner.int8.onnx",
+      "bytes": 1033416,
+      "sha256": "b34584dc6f561089e1d747fedebb3765f2caa72c927ef54d7ca55e5ae40a814b"
+    },
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/README.md",
+      "bytes": 317,
+      "sha256": "24a953594138ebd61a4e60637febcff1cecd4f79ed05632109a937b74f9ebcd7"
+    },
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/decoder.onnx",
+      "bytes": 5165083,
+      "sha256": "06522ad63cec0fdf6809f4e1db9bb4f7d710c34582e3b35db62ac60eccafac7e"
+    },
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/test_wavs/1.wav",
+      "bytes": 164976,
+      "sha256": "30edbabea84ca4c076f5b43bb44495f436f6711319c32a200d3fc5c67c1fee1d"
+    },
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/test_wavs/0.wav",
+      "bytes": 179646,
+      "sha256": "668bf8df51a10027b84d5d8816a1ce11ae93545538dc05cfe2aa6811d399c250"
+    },
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/test_wavs/8k.wav",
+      "bytes": 72434,
+      "sha256": "0ed3bddacf0a23477d2b3c07ff9c24ad9c1fc3b31cdd47cb0773441e8e045cde"
+    },
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/encoder.int8.onnx",
+      "bytes": 161141793,
+      "sha256": "5ac51e27981bb4dab01bb9be4958453ba50c3b61c063ddda0eab23fd3671aa4f"
+    },
+    {
+      "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/tokens.txt",
+      "bytes": 20628,
+      "sha256": "6193c7ea1c96d0d9a1e9652789b40d13a8a913b434a5451e93158f5a09fd6652"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/lib/libsherpa-onnx-c-api.dylib",
+      "bytes": 2999920,
+      "sha256": "ae729669633008692c670d4e4c942db7ea5bdc38abc2f479516062d48849e9d1"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/lib/libsherpa-onnx-cxx-api.dylib",
+      "bytes": 180176,
+      "sha256": "7d9529551bea7e63d795a6c8d02b746bca06c1ab3080f2f14698d945b6810c8d"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/lib/libonnxruntime.dylib",
+      "bytes": 28775120,
+      "sha256": "3567d114f7299d559993e536d605a6f46d7bc9d2542004accc80ee9bf5457f0b"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/include/sherpa-onnx/c-api/c-api.h",
+      "bytes": 167657,
+      "sha256": "2a1b95084be8fd1deb3228fcad2fd3f7f0258b64582f7402281ec174c7b7f4ce"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/include/sherpa-onnx/c-api/cxx-api.h",
+      "bytes": 66998,
+      "sha256": "5b02af132b382a82addfa47f927d9cb41bb71d8598d78253ded41410fb12dbda"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-microphone-offline",
+      "bytes": 2093872,
+      "sha256": "648b7f5e97f9c5b96a5aea0c64b9fd77817a53ec8188dd849d30e23c589a6507"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-microphone-offline-audio-tagging",
+      "bytes": 369088,
+      "sha256": "f659dbca063572754af604e3f24c0ecd7911624c02ffdda8f828044b41e3977b"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-microphone",
+      "bytes": 1758048,
+      "sha256": "3f34015318feaecec9663c3294f488234632ec888881c8e03f478b8a19be17d2"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-websocket-server",
+      "bytes": 2565552,
+      "sha256": "7fa4ef0fb56a3c74d3a65c309988ce1217e03889cf3402fb0b05c75d6f1acd28"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-vad-microphone-offline-asr",
+      "bytes": 2150032,
+      "sha256": "5b53cd61a5f6cc7bdb0b195fdad8dc2bf29ddb13876c59f88e813eaf13a42093"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-online-punctuation",
+      "bytes": 272816,
+      "sha256": "7f7f377a0efbb8d5e278209c52ae35ffa38b034318ee8e3f4ec3c12dd67f4aa6"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-denoiser",
+      "bytes": 304160,
+      "sha256": "bf20b77e4d8a4fba22e0e40b197bafce5538f56b4f0cc0b9a83c6b978ad30e3f"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-microphone-offline-speaker-identification",
+      "bytes": 405680,
+      "sha256": "fa364671f92ce6c448b270962537ae93f36e8906c5b79ddd3b35261960313b7e"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-online-denoiser",
+      "bytes": 305136,
+      "sha256": "27c11efa92d079d33937caac1acc5319e2b2825c543d10e4181b55edaf55a3d8"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-vad-microphone-simulated-streaming-asr",
+      "bytes": 2151088,
+      "sha256": "498ce164e04fcad3dc022f76182249fbb618c574c4728c969979913becff62cd"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-vad",
+      "bytes": 304928,
+      "sha256": "a3cffcfc0df5d73be126f5b0f1b23bdc031f30f95fcf12bc1ddb6dc52183e9d9"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-keyword-spotter",
+      "bytes": 631584,
+      "sha256": "5ee75d7fcf16025fd7f70fb30b7f2ef17827a7f891acbf3b3b161dfd7b3322ad"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx",
+      "bytes": 1700416,
+      "sha256": "864ca980d87651bceb19c7b78fb175f3ada392cfb876adcb8e3c5909526ef646"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-online-websocket-client",
+      "bytes": 796752,
+      "sha256": "3553c14469c9943dd68c471e116a2adcc362d8e3ddc406da89c4085ffc169a47"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-audio-tagging",
+      "bytes": 308464,
+      "sha256": "ccaa266aece2093e472f3e98ff3506be04a7fb58a56bb31125f7a468f5a1704e"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-vad-microphone",
+      "bytes": 363840,
+      "sha256": "a44c278b467802a67b3dfaf23d85fa93a9c7530ace06fae6d754c1b6435fb6b9"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-source-separation",
+      "bytes": 305424,
+      "sha256": "d86d17cabee060b5c48d60b49f3cd552dc3801a1cf68e377746e5e812acf26e3"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-language-identification",
+      "bytes": 324352,
+      "sha256": "620c0258c8b39690cc683e969adab03cd1488ee31277f7cc1ab73776fa228ee1"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-diacritization",
+      "bytes": 269200,
+      "sha256": "d91def4eb32850256b264e60e18ab8388d3ded9914f4cfa9777840375409db8b"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-version",
+      "bytes": 67952,
+      "sha256": "de41f59323db7ffb6910d78b03d281b70b5b7287b3022a8b16ca3619b2a9dd98"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-parallel",
+      "bytes": 2069888,
+      "sha256": "df7a3d43d9f8e2598b053d3c4156b78b6146d8255e50c232332e0df4e15aefde"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-vad-with-offline-asr",
+      "bytes": 2107456,
+      "sha256": "1838ed536229b968c78ad229f86c3d248545cacb20248c1656cab42bfd2620fb"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-keyword-spotter-microphone",
+      "bytes": 690208,
+      "sha256": "6aed6aa2c149f2f1e8e0132f6ba6e855b872606ac5c226c9956a3cb58ae73331"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-punctuation",
+      "bytes": 247616,
+      "sha256": "f54a3f16887a81b74dfd55b93b02cc2573e08ce898e1df8ac7b7a95acba7f9d6"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline-speaker-diarization",
+      "bytes": 405440,
+      "sha256": "e1170a93308867d8e343ac22a00b46b1d8e786c763c32a17caff07cf934ff66f"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-online-websocket-server",
+      "bytes": 2237920,
+      "sha256": "c4ab1cb197b146a338e40aba07f4733d77df6138ca99d741dd7edf12a77cae88"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-pa-devs",
+      "bytes": 128960,
+      "sha256": "ca2e56bc08ea3b2bac08490932476e9e7d6725c751229f64a7b83feb2a4b264a"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-vad-with-online-asr",
+      "bytes": 1755824,
+      "sha256": "5e4d1092cab71a35bb590417cbb4065f84e8f480c6e7f2f6028769c7bd05e9b5"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/bin/sherpa-onnx-offline",
+      "bytes": 2051152,
+      "sha256": "23888c34222b5b47f4fe59d81ebd1bff1b1a683a01dcdc5ce4152892a23233b1"
+    }
+  ],
+  "sourceArchives": [
+    {
+      "path": "Docs/Prototypes/LiveASR-0.6/sherpa-dependency-download-attempt1/sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30.tar.bz2",
+      "bytes": 132634597,
+      "sha256": "5a2832047ea1f97dd0dc595b816c230c4bafad65cfc0341fa57517cadc50afd0"
+    },
+    {
+      "path": "Docs/Prototypes/LiveASR-0.6/sherpa-dependency-download-attempt1/sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts.tar.bz2",
+      "bytes": 18252168,
+      "sha256": "91b96512c4fa1960f8a9ed5360a6c8dda53a4b5015d0590244f14086a234557a"
+    }
+  ],
+  "modelFiles": [
+    {
+      "relativePath": "joiner.int8.onnx",
+      "bytes": 1033416,
+      "sha256": "b34584dc6f561089e1d747fedebb3765f2caa72c927ef54d7ca55e5ae40a814b"
+    },
+    {
+      "relativePath": "decoder.onnx",
+      "bytes": 5165083,
+      "sha256": "06522ad63cec0fdf6809f4e1db9bb4f7d710c34582e3b35db62ac60eccafac7e"
+    },
+    {
+      "relativePath": "encoder.int8.onnx",
+      "bytes": 161141793,
+      "sha256": "5ac51e27981bb4dab01bb9be4958453ba50c3b61c063ddda0eab23fd3671aa4f"
+    },
+    {
+      "relativePath": "tokens.txt",
+      "bytes": 20628,
+      "sha256": "6193c7ea1c96d0d9a1e9652789b40d13a8a913b434a5451e93158f5a09fd6652"
+    }
+  ],
+  "modelREADME": {
+    "path": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30/README.md",
+    "bytes": 317,
+    "sha256": "24a953594138ebd61a4e60637febcff1cecd4f79ed05632109a937b74f9ebcd7",
+    "relativePath": "README.md"
+  },
+  "runtimeLibraries": [
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/lib/libsherpa-onnx-c-api.dylib",
+      "bytes": 2999920,
+      "sha256": "ae729669633008692c670d4e4c942db7ea5bdc38abc2f479516062d48849e9d1",
+      "relativePath": "lib/libsherpa-onnx-c-api.dylib"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/lib/libsherpa-onnx-cxx-api.dylib",
+      "bytes": 180176,
+      "sha256": "7d9529551bea7e63d795a6c8d02b746bca06c1ab3080f2f14698d945b6810c8d",
+      "relativePath": "lib/libsherpa-onnx-cxx-api.dylib"
+    },
+    {
+      "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/lib/libonnxruntime.dylib",
+      "bytes": 28775120,
+      "sha256": "3567d114f7299d559993e536d605a6f46d7bc9d2542004accc80ee9bf5457f0b",
+      "relativePath": "lib/libonnxruntime.dylib"
+    }
+  ],
+  "sherpaHeader": {
+    "path": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts/include/sherpa-onnx/c-api/c-api.h",
+    "bytes": 167657,
+    "sha256": "2a1b95084be8fd1deb3228fcad2fd3f7f0258b64582f7402281ec174c7b7f4ce",
+    "relativePath": "include/sherpa-onnx/c-api/c-api.h"
+  },
+  "pcmHeaders": [
+    {
+      "path": "headers/libavcodec/avcodec.h",
+      "bytes": 108600,
+      "sha256": "324452903f0d3b4bb4078652ca32c9ca29d7b3db5e005e1af04487409bd3090d"
+    },
+    {
+      "path": "headers/libavcodec/codec.h",
+      "bytes": 11788,
+      "sha256": "ad4550b3f8ff7c7dd1c79a373721ba43273c4d1f156c683e11e27f9b5d89be1a"
+    },
+    {
+      "path": "headers/libavcodec/codec_desc.h",
+      "bytes": 4264,
+      "sha256": "d1fc6e89a3a7e49e61893620e00256d4f00db994764435ebe159b46a3c4326b5"
+    },
+    {
+      "path": "headers/libavcodec/codec_id.h",
+      "bytes": 18573,
+      "sha256": "765765fee16f9551ebd4fb5441fc6e5fc3d93c4754703831673bf887f2b1c87d"
+    },
+    {
+      "path": "headers/libavcodec/codec_par.h",
+      "bytes": 8400,
+      "sha256": "c33270179f2d44d94a75438923400f6a1c6dacf7b755692e723e3101cbeb65d3"
+    },
+    {
+      "path": "headers/libavcodec/defs.h",
+      "bytes": 13333,
+      "sha256": "f1d391ac2417702b59b7a4b6ae3927eea8c8b5e9858ae9ade6fdd009a60bd9ce"
+    },
+    {
+      "path": "headers/libavcodec/packet.h",
+      "bytes": 32798,
+      "sha256": "2e10c19c2fd953a5f18198eea1106334254d963f86df7999857c293dee8ac056"
+    },
+    {
+      "path": "headers/libavcodec/version.h",
+      "bytes": 1619,
+      "sha256": "51681f1efe6edff28119f805aaa1cf0ef7a0043e1b68a9ae09a76d92056c4775"
+    },
+    {
+      "path": "headers/libavcodec/version_major.h",
+      "bytes": 1629,
+      "sha256": "4ce6f0974cff7069900045ee551001bb57902a2f5ec0b5f538fbc1e4e9f6aa83"
+    },
+    {
+      "path": "headers/libavformat/avformat.h",
+      "bytes": 121793,
+      "sha256": "694da025f30497481f4703e06de106bd417a5718f8fdcdf5e09e34f4b5f21114"
+    },
+    {
+      "path": "headers/libavformat/avio.h",
+      "bytes": 31178,
+      "sha256": "30312971fc299e65bc69cf1beddb76f50394e044d9c71fe32fec3ae9c13bd1af"
+    },
+    {
+      "path": "headers/libavformat/version.h",
+      "bytes": 1652,
+      "sha256": "d9bb073f747dd8fa5039eda8a0cc8322e9c61494f2b3df46ed35e4e6010b05fc"
+    },
+    {
+      "path": "headers/libavformat/version_major.h",
+      "bytes": 1876,
+      "sha256": "436db6c1b56db87e83682639fd0285e8b0138acc4fb572868c70a690eda7bb5e"
+    },
+    {
+      "path": "headers/libavutil/arm/intmath.h",
+      "bytes": 3884,
+      "sha256": "afedaaa7d138f96cbc3634aa8f6cbb003903dcd8dec7ea53d1c36b7c52101ed1"
+    },
+    {
+      "path": "headers/libavutil/attributes.h",
+      "bytes": 6672,
+      "sha256": "041300e50a7e4c97d5ab3ea8c92d3db637e7047c8cb021f64ead2874391ee954"
+    },
+    {
+      "path": "headers/libavutil/attributes_internal.h",
+      "bytes": 1794,
+      "sha256": "3cc99d4b6f9ca40913bfe539a300ddd84ec9cf15e0fd51d2d7a28405d9dbe8b2"
+    },
+    {
+      "path": "headers/libavutil/avconfig.h",
+      "bytes": 180,
+      "sha256": "975611ad5eba15212d9e1d5fca9d4fdf0daec6d2269b2fcab8e29af8667164bc"
+    },
+    {
+      "path": "headers/libavutil/avutil.h",
+      "bytes": 8702,
+      "sha256": "01a511d927eaab20cf57076611ff5649bc6089d2d766c4b20c9d11c3da095efd"
+    },
+    {
+      "path": "headers/libavutil/buffer.h",
+      "bytes": 11998,
+      "sha256": "f16742d574216434580573a2b09f56fc5b66b7dda1960d4f02ba59e3269ba548"
+    },
+    {
+      "path": "headers/libavutil/channel_layout.h",
+      "bytes": 34091,
+      "sha256": "fbd3246297cd72be45268eacd9229d23247dfe394fb15b6a40ce8773422661c6"
+    },
+    {
+      "path": "headers/libavutil/common.h",
+      "bytes": 17359,
+      "sha256": "08f14cf0ea3fede141d3790b30df2ed6edfc5dd81eb3c8181c3a33c314c46bbb"
+    },
+    {
+      "path": "headers/libavutil/cpu.h",
+      "bytes": 6857,
+      "sha256": "52034bd08c5fa7b476451acb4578152bfd88e650774a92c107c810e820314063"
+    },
+    {
+      "path": "headers/libavutil/dict.h",
+      "bytes": 9521,
+      "sha256": "b8b7abebb6e5ab5ffa70b8463df52c96d4e774aa2d5574bebbc02f6031e62ad8"
+    },
+    {
+      "path": "headers/libavutil/error.h",
+      "bytes": 5555,
+      "sha256": "bcf4f7e69c7e0d658ad6e81611810f7cf1f0b8334ebe948d27e518c459e4104c"
+    },
+    {
+      "path": "headers/libavutil/frame.h",
+      "bytes": 43901,
+      "sha256": "2eb83475589dbe72d9dbbb5367370b7c1384fbb20afffbcf482de0437b6eaf8e"
+    },
+    {
+      "path": "headers/libavutil/hwcontext.h",
+      "bytes": 24170,
+      "sha256": "229c918d0809dbbaa0aaebd18848bece039ad458538f0fcafc11015fd2111fc2"
+    },
+    {
+      "path": "headers/libavutil/internal.h",
+      "bytes": 4580,
+      "sha256": "ba779e92597fd8d11a50cec2afb9fcb95b7f7cb6a6f06280b4af28f3461de083"
+    },
+    {
+      "path": "headers/libavutil/intfloat.h",
+      "bytes": 1726,
+      "sha256": "3a29e4eebc8c269cfd867b96de91d8231773d392c12a8820e46eaba96d2b4ca1"
+    },
+    {
+      "path": "headers/libavutil/intmath.h",
+      "bytes": 4147,
+      "sha256": "25f09b4e16dd8edd21cba932f1503d5bc361bd5a6b3993e3cdd82b747128ab53"
+    },
+    {
+      "path": "headers/libavutil/libm.h",
+      "bytes": 14360,
+      "sha256": "e7f4417fba09554b12fb0cdb36ce72b7d24b2d2bfb9865b2bde1056ad0f72131"
+    },
+    {
+      "path": "headers/libavutil/log.h",
+      "bytes": 14088,
+      "sha256": "b8ef46be6210baadb3ad61eb72ee48e7dd7d6be39c17c3a8bbc8c81ba9e26110"
+    },
+    {
+      "path": "headers/libavutil/macros.h",
+      "bytes": 2304,
+      "sha256": "b63b3a268b096f0eed1e91b821714cff334e5dc5bb34365148704393ae15321e"
+    },
+    {
+      "path": "headers/libavutil/mathematics.h",
+      "bytes": 9565,
+      "sha256": "e85c71fb77b0fe7823a88db904982e2a9b953e806ced0714fe6cc6b8a0951469"
+    },
+    {
+      "path": "headers/libavutil/mem.h",
+      "bytes": 20457,
+      "sha256": "bf9a1d8c218c38b333efb16be076c5778d31d66a0691bdd6175f171c08283d7c"
+    },
+    {
+      "path": "headers/libavutil/mips/libm_mips.h",
+      "bytes": 2938,
+      "sha256": "3d983940bcab107144a6f1aa04e89d19e26c151efba6ff6f9093fe7ddf942e28"
+    },
+    {
+      "path": "headers/libavutil/opt.h",
+      "bytes": 46030,
+      "sha256": "ed473055a2c58dc24bc560d9c86dbbc51558c3e87836f1c0869011130783d999"
+    },
+    {
+      "path": "headers/libavutil/pixfmt.h",
+      "bytes": 47890,
+      "sha256": "6a8f5a61fe8d3bda60a62e59cc15237f61555ebd77adf477fc6d69ab8e609f77"
+    },
+    {
+      "path": "headers/libavutil/rational.h",
+      "bytes": 6287,
+      "sha256": "f4fb850924b414f9ca35579df4e50d6f406734eb9735bbfbf388ae22ec5a0a9c"
+    },
+    {
+      "path": "headers/libavutil/riscv/cpu.h",
+      "bytes": 2216,
+      "sha256": "29004372fbf6cef4955687607310817617fb018354235b684d7b372c74af4df0"
+    },
+    {
+      "path": "headers/libavutil/riscv/intmath.h",
+      "bytes": 6744,
+      "sha256": "41e5aaaa8ff7020114a542a2f0536904e845e818c7fa9bdbda55e3bb4fc55092"
+    },
+    {
+      "path": "headers/libavutil/samplefmt.h",
+      "bytes": 10270,
+      "sha256": "bec4e2708b42a026450c1227e137661f71850698f19b89f6e9f721fe993f56a9"
+    },
+    {
+      "path": "headers/libavutil/version.h",
+      "bytes": 4124,
+      "sha256": "0f2ba770c0abe2e341e1e52d34b0f092649a78169945956725b0afb9869a7766"
+    },
+    {
+      "path": "headers/libavutil/x86/intmath.h",
+      "bytes": 3411,
+      "sha256": "f2948aa2953afe5959c98c40e529cdb9972de995ca2e53f4efe3420fedb1186a"
+    },
+    {
+      "path": "headers/libswresample/swresample.h",
+      "bytes": 22361,
+      "sha256": "b23e625ab295d57a3d1ae0142c937b485dc386a36e4ed63f4b99ed886dc905e1"
+    },
+    {
+      "path": "headers/libswresample/version.h",
+      "bytes": 1707,
+      "sha256": "1f362ec3b24663a67a1623367294e818a3b6fc0ef0c4fd83c9c6b0cee54f42d4"
+    },
+    {
+      "path": "headers/libswresample/version_major.h",
+      "bytes": 1015,
+      "sha256": "c730cced7041664f716e82872850329b59fa965f1c93044ce37593bd14a59c40"
+    }
+  ],
+  "pcmLibraries": [
+    {
+      "path": "Vendor/lib/libSvtAv1Enc.4.dylib",
+      "sha256": "b04799102fa2002243b945ec86930561e831591e29d29b5bee399a42b13c7ca6",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "4.2.0"
+    },
+    {
+      "path": "Vendor/lib/libavcodec.63.dylib",
+      "sha256": "dada1df279a92b379109567292bb9b29dcb529acd0356a2f40cc3f9ebc6b6034",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libswresample.7.dylib",
+        "@loader_path/libavutil.61.dylib",
+        "@loader_path/libwebpmux.3.dylib",
+        "/usr/lib/libiconv.2.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "@loader_path/libdav1d.7.dylib",
+        "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+        "@loader_path/libjxl.0.11.dylib",
+        "@loader_path/libjxl_threads.0.11.dylib",
+        "@loader_path/libspeex.1.dylib",
+        "@loader_path/libSvtAv1Enc.4.dylib",
+        "@loader_path/libvorbis.0.dylib",
+        "@loader_path/libvorbisenc.2.dylib",
+        "@loader_path/libwebp.7.dylib",
+        "/usr/lib/libz.1.dylib",
+        "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+        "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+        "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+        "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+        "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+        "@loader_path/libsoxr.0.dylib"
+      ],
+      "dylib_current_version": "63.1.101"
+    },
+    {
+      "path": "Vendor/lib/libavformat.63.dylib",
+      "sha256": "8fc0375b158abf39260550f4a1a1b6f76870fbe432afcdb13d52d9e19526e1ca",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libavcodec.63.dylib",
+        "@loader_path/libswresample.7.dylib",
+        "@loader_path/libavutil.61.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/usr/lib/libbz2.1.0.dylib",
+        "/usr/lib/libz.1.dylib",
+        "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+        "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+        "@loader_path/libwebpmux.3.dylib",
+        "/usr/lib/libiconv.2.dylib",
+        "@loader_path/libdav1d.7.dylib",
+        "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+        "@loader_path/libjxl.0.11.dylib",
+        "@loader_path/libjxl_threads.0.11.dylib",
+        "@loader_path/libspeex.1.dylib",
+        "@loader_path/libSvtAv1Enc.4.dylib",
+        "@loader_path/libvorbis.0.dylib",
+        "@loader_path/libvorbisenc.2.dylib",
+        "@loader_path/libwebp.7.dylib",
+        "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+        "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+        "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+        "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+        "@loader_path/libsoxr.0.dylib"
+      ],
+      "dylib_current_version": "63.1.101"
+    },
+    {
+      "path": "Vendor/lib/libavutil.61.dylib",
+      "sha256": "fbc487e70f0660039b7689e14d29dc0472ac9779d99dea5e15e6d733356bbd21",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib",
+        "/usr/lib/libz.1.dylib",
+        "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+        "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+        "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+        "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+        "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices"
+      ],
+      "dylib_current_version": "61.1.101"
+    },
+    {
+      "path": "Vendor/lib/libbrotlicommon.1.dylib",
+      "sha256": "0eb46b4a2a2da24829aec85ae83f4724a16f09654cc47def61c7b9f10a0bdcea",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "1.0.9"
+    },
+    {
+      "path": "Vendor/lib/libbrotlidec.1.dylib",
+      "sha256": "3fcc91f2aba21a9acf62795452ad8109a744fd9c3cbab5f593ab5fb6a1e7d39d",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libbrotlicommon.1.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "1.0.9"
+    },
+    {
+      "path": "Vendor/lib/libbrotlienc.1.dylib",
+      "sha256": "9ea2b28b602fda5ffe0d74b87e08c3b8db29b1267e22369324b45028b4cdf86e",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libbrotlicommon.1.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "1.0.9"
+    },
+    {
+      "path": "Vendor/lib/libdav1d.7.dylib",
+      "sha256": "24b42326f1fd0fbf3a52113ae0811b8267438ac9044262bddcb0dd3c539b7642",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "7.0.0"
+    },
+    {
+      "path": "Vendor/lib/libjxl.0.11.dylib",
+      "sha256": "dfdb6271cdc739b4d9b7e3c98fb864fde99835ce3f968095d70de95b9e2ec9d3",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libjxl_cms.0.11.dylib",
+        "@loader_path/libbrotlidec.1.dylib",
+        "@loader_path/libbrotlienc.1.dylib",
+        "@loader_path/libbrotlicommon.1.dylib",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "0.11.2"
+    },
+    {
+      "path": "Vendor/lib/libjxl_cms.0.11.dylib",
+      "sha256": "e33de0cba5b60852e30fe87e0b45bd6653fa3efb38d4ca9dc965a0ad5283d327",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "0.11.2"
+    },
+    {
+      "path": "Vendor/lib/libjxl_threads.0.11.dylib",
+      "sha256": "3c403bfc410791473f01d9faf49c8a397de5fe7abd3b50a14234c6230f741804",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "0.11.2"
+    },
+    {
+      "path": "Vendor/lib/libogg.0.dylib",
+      "sha256": "ef8487813da0bfcea63c90c85ecb021a073310f2194426c857d3b4aa533ed07d",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "9.6.0"
+    },
+    {
+      "path": "Vendor/lib/libsharpyuv.0.dylib",
+      "sha256": "f259287a21c949ca3e4e5a05c62fd5a4643b1f45fdf84dd10999ce162decfbc4",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "2.2.0"
+    },
+    {
+      "path": "Vendor/lib/libsoxr.0.dylib",
+      "sha256": "66148102b606c392deea89c1e397a3c325cf2c5bacf5d7cdf24b74190cefbf32",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "0.1.2"
+    },
+    {
+      "path": "Vendor/lib/libspeex.1.dylib",
+      "sha256": "bc1e53aba34f428c7681fb16f0ef4a1007eb2ff3bce24ed89408115b4410e792",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "7.2.0"
+    },
+    {
+      "path": "Vendor/lib/libswresample.7.dylib",
+      "sha256": "fa1eb6484066062e0c1a639c76a5af5de46908650adce0a50bcddc4ec8088086",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libavutil.61.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "@loader_path/libsoxr.0.dylib",
+        "/usr/lib/libz.1.dylib",
+        "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+        "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+        "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+        "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+        "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices"
+      ],
+      "dylib_current_version": "7.1.101"
+    },
+    {
+      "path": "Vendor/lib/libvorbis.0.dylib",
+      "sha256": "ba48848e94af7c27ba712ee7e428a426723ce2153ee52bb8fb9fdf8f3af81aa4",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libogg.0.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "5.9.0"
+    },
+    {
+      "path": "Vendor/lib/libvorbisenc.2.dylib",
+      "sha256": "c8f9c4a5d7077f1350ca0cad08be06a5edd2cd8e35b074bf2b279d9fba220232",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libvorbis.0.dylib",
+        "@loader_path/libogg.0.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "3.12.0"
+    },
+    {
+      "path": "Vendor/lib/libwebp.7.dylib",
+      "sha256": "9ed363c7f5fdb673c9f9aa737170bde3d5db61fc41c61e5e475f0d9d38d9508a",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libsharpyuv.0.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "10.0.0"
+    },
+    {
+      "path": "Vendor/lib/libwebpmux.3.dylib",
+      "sha256": "57ee24d639509acf0a4875ad9bc4aaebc2e97cd231be74423479186acedcff07",
+      "minimum_macos": "11.0",
+      "architecture": "arm64",
+      "dependencies": [
+        "@loader_path/libwebp.7.dylib",
+        "@loader_path/libsharpyuv.0.dylib",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "dylib_current_version": "5.2.0"
+    }
+  ],
+  "engineDirectoryName": "sherpa-onnx-v1.13.8-osx-arm64-shared-no-tts",
+  "modelDirectoryName": "sherpa-onnx-streaming-zipformer-zh-int8-2025-06-30",
+  "VendorManifestSHA256": "688cad54db0a645380b36c800c7c3eb7d2c4ee1f4b4e99f5570c905a11576875",
+  "VendorToolsManifestSHA256": "e24473a4a1303efc36b78dc60fbdd1fa1fe0be3c283fa647fe82505665bb5f56"
+}

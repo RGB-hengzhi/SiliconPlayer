@@ -1,0 +1,229 @@
+{
+  "official_artifacts": {
+    "yt-dlp.tar.gz": {
+      "version": "2026.08.19",
+      "bytes": 6020567,
+      "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.tar.gz",
+      "sha256": "072aad4f2a7604e92155f61a275a4752dc64046c8f6d90df3710525d94cd37c1"
+    },
+    "yt_dlp_ejs-0.8.0-py3-none-any.whl": {
+      "version": "0.8.0",
+      "bytes": 53443,
+      "url": "https://github.com/yt-dlp/ejs/releases/download/0.8.0/yt_dlp_ejs-0.8.0-py3-none-any.whl",
+      "sha256": "79300e5fca7f937a1eeede11f0456862c1b41107ce1d726871e0207424f4bdb4"
+    },
+    "deno-aarch64-apple-darwin.zip": {
+      "version": "2.9.7",
+      "bytes": 38469316,
+      "url": "https://github.com/denoland/deno/releases/download/v2.9.7/deno-aarch64-apple-darwin.zip",
+      "sha256": "5cd46d6268f6f78f5d88bdc7159d20bd44cdaa4b3303474839f87ec6fe7ae25c"
+    },
+    "pyinstaller.py": {
+      "bytes": 4739,
+      "url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/3a08beaf031ab68f966401ead017ac81fe8486cf/bundle/pyinstaller.py",
+      "sha256": "792b2e882d469b46e46f15707bf1869a2c043f7e89c79bc75f8725014482759a"
+    },
+    "THIRD_PARTY_LICENSES.txt": {
+      "bytes": 243550,
+      "url": "https://raw.githubusercontent.com/yt-dlp/yt-dlp/3a08beaf031ab68f966401ead017ac81fe8486cf/THIRD_PARTY_LICENSES.txt",
+      "sha256": "472aefe951c7db35e1657c1d13fd337140511ed6f2b329205105ad441c5a02b7"
+    },
+    "Deno-Cargo.lock": {
+      "url": "https://raw.githubusercontent.com/denoland/deno/v2.9.7/Cargo.lock",
+      "bytes": 294948,
+      "sha256": "4b501f05a28bf12c453593f0b558407890575b5f34b9dcbb2dc8e172d58a0c95"
+    },
+    "Deno-MIT.txt": {
+      "url": "https://raw.githubusercontent.com/denoland/deno/v2.9.7/LICENSE.md",
+      "bytes": 1074,
+      "sha256": "f62497fffecc0852960c8d3e6934b9db86d16396e9b604072e923892cae3a588"
+    },
+    "Deno-Node-types-MIT.txt": {
+      "url": "https://raw.githubusercontent.com/denoland/deno/v2.9.7/cli/tsc/dts/node/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    "Deno-Undici-types-MIT.txt": {
+      "url": "https://raw.githubusercontent.com/denoland/deno/v2.9.7/cli/tsc/dts/node/undici/LICENSE",
+      "bytes": 1090,
+      "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27"
+    },
+    "TypeScript-6.0.3-Apache.txt": {
+      "url": "https://raw.githubusercontent.com/microsoft/TypeScript/v6.0.3/LICENSE.txt",
+      "bytes": 9197,
+      "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+    },
+    "V8-15.0.245.2-BSD.txt": {
+      "url": "https://raw.githubusercontent.com/v8/v8/15.0.245.2/LICENSE",
+      "bytes": 3093,
+      "sha256": "6ab33af8774a0f396ee3aeeb761e3229057682d6f9fa7f572e390c2cb3a6e509"
+    },
+    "RustyV8-150.4.0-MIT.txt": {
+      "url": "https://raw.githubusercontent.com/denoland/rusty_v8/v150.4.0/LICENSE",
+      "bytes": 1078,
+      "sha256": "1c6356fb751d45f0c53093ebf8a7f5e580e802f51999178e19d60f3ec39e147d"
+    }
+  },
+  "python_packages": [
+    {
+      "name": "brotli",
+      "version": "1.2.0",
+      "url": "https://files.pythonhosted.org/packages/11/ee/b0a11ab2315c69bb9b45a2aaed022499c9c24a205c3a49c3513b541a7967/brotli-1.2.0-cp312-cp312-macosx_10_13_universal2.whl",
+      "sha256": "35d382625778834a7f3061b15423919aa03e4f5da34ac8e02c074e4b75ab4f84",
+      "metadata_license": "MIT",
+      "scope": "build/runtime",
+      "filename": "brotli-1.2.0-cp312-cp312-macosx_10_13_universal2.whl",
+      "bytes": 861543
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "metadata_license": "MPL-2.0",
+      "scope": "build/runtime",
+      "filename": "certifi-2026.7.22-py3-none-any.whl",
+      "bytes": 136983
+    },
+    {
+      "name": "mutagen",
+      "version": "1.48.1",
+      "url": "https://files.pythonhosted.org/packages/47/d8/a29e4e3991765e7ce4ed1f7e4074fe1ba9da03e0048639734de60f9cadb9/mutagen-1.48.1-py3-none-any.whl",
+      "sha256": "4f077fe87d3fc7fba259aa63d8c026b18382ca6a42ef37c61e16f1b1b5b82fe7",
+      "metadata_license": "GPL-2.0-or-later",
+      "scope": "build/runtime",
+      "filename": "mutagen-1.48.1-py3-none-any.whl",
+      "bytes": 195706
+    },
+    {
+      "name": "pycryptodomex",
+      "version": "3.23.0",
+      "url": "https://files.pythonhosted.org/packages/dd/9c/1a8f35daa39784ed8adf93a694e7e5dc15c23c741bbda06e1d45f8979e9e/pycryptodomex-3.23.0-cp37-abi3-macosx_10_9_universal2.whl",
+      "sha256": "06698f957fe1ab229a99ba2defeeae1c09af185baa909a31a5d1f9d42b1aaed6",
+      "metadata_license": "BSD, Public Domain",
+      "scope": "build/runtime",
+      "filename": "pycryptodomex-3.23.0-cp37-abi3-macosx_10_9_universal2.whl",
+      "bytes": 2499240
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl",
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "metadata_license": "Apache-2.0",
+      "scope": "build/runtime",
+      "filename": "requests-2.34.2-py3-none-any.whl",
+      "bytes": 73075
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "url": "https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl",
+      "sha256": "9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897",
+      "metadata_license": "MIT",
+      "scope": "build/runtime",
+      "filename": "urllib3-2.7.0-py3-none-any.whl",
+      "bytes": 131087
+    },
+    {
+      "name": "websockets",
+      "version": "17.0.1",
+      "url": "https://files.pythonhosted.org/packages/d9/82/123660edc759c225626b3b91952c7625f85c77a8362acbc35a4623120f7d/websockets-17.0.1-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "c23e532c8a2325a1e7486de8763a60dc43e83f01bcaeca07e3ba79652c156db1",
+      "metadata_license": "BSD-3-Clause",
+      "scope": "build/runtime",
+      "filename": "websockets-17.0.1-cp312-cp312-macosx_11_0_arm64.whl",
+      "bytes": 210549
+    },
+    {
+      "name": "yt-dlp-ejs",
+      "version": "0.8.0",
+      "url": "https://github.com/yt-dlp/ejs/releases/download/0.8.0/yt_dlp_ejs-0.8.0-py3-none-any.whl",
+      "sha256": "79300e5fca7f937a1eeede11f0456862c1b41107ce1d726871e0207424f4bdb4",
+      "metadata_license": "Unlicense AND MIT AND ISC",
+      "scope": "build/runtime",
+      "bytes": 53443,
+      "filename": "yt_dlp_ejs-0.8.0-py3-none-any.whl"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.0",
+      "url": "https://files.pythonhosted.org/packages/6d/3c/045ea64ea5a550870dd8ab60b2242870328d53f17d2be593b4f9f3121474/charset_normalizer-3.5.0-cp312-cp312-macosx_10_13_universal2.whl",
+      "sha256": "98820e1ceb25c6df7a80c4fd8efa59cb121f99bc7c4c1693ad94a2caff5b311d",
+      "metadata_license": "MIT",
+      "scope": "build/runtime",
+      "filename": "charset_normalizer-3.5.0-cp312-cp312-macosx_10_13_universal2.whl",
+      "bytes": 343861
+    },
+    {
+      "name": "idna",
+      "version": "3.18",
+      "url": "https://files.pythonhosted.org/packages/1e/5e/d4e9f1a599fb8e573b7b87160658329fbf28d19eac2718f51fc3def3aa5a/idna-3.18-py3-none-any.whl",
+      "sha256": "7f952cbe720b688055e3f87de14f5c3e5fdaa8bc3928985c4077ca689de849a2",
+      "metadata_license": "BSD-3-Clause",
+      "scope": "build/runtime",
+      "filename": "idna-3.18-py3-none-any.whl",
+      "bytes": 65455
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.0",
+      "url": "https://files.pythonhosted.org/packages/da/c7/abe1ca65ab55e615961df1b978b997129a8488ab9dc0931dc7664bdc4c99/pyinstaller-6.22.0-py3-none-macosx_10_13_universal2.whl",
+      "sha256": "d7c7c5b149f7f9b37585b37e2376f774038b6a5633ba34db0de2698f75391e13",
+      "metadata_license": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)",
+      "scope": "build",
+      "filename": "pyinstaller-6.22.0-py3-none-macosx_10_13_universal2.whl",
+      "bytes": 1058495
+    },
+    {
+      "name": "macholib",
+      "version": "1.16.4",
+      "url": "https://files.pythonhosted.org/packages/c7/d1/a9f36f8ecdf0fb7c9b1e78c8d7af12b8c8754e74851ac7b94a8305540fc7/macholib-1.16.4-py2.py3-none-any.whl",
+      "sha256": "da1a3fa8266e30f0ce7e97c6a54eefaae8edd1e5f86f3eb8b95457cae90265ea",
+      "metadata_license": "MIT",
+      "scope": "build",
+      "filename": "macholib-1.16.4-py2.py3-none-any.whl",
+      "bytes": 38117
+    },
+    {
+      "name": "altgraph",
+      "version": "0.17.5",
+      "url": "https://files.pythonhosted.org/packages/a9/ba/000a1996d4308bc65120167c21241a3b205464a2e0b58deda26ae8ac21d1/altgraph-0.17.5-py2.py3-none-any.whl",
+      "sha256": "f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597",
+      "metadata_license": "MIT",
+      "scope": "build",
+      "filename": "altgraph-0.17.5-py2.py3-none-any.whl",
+      "bytes": 21228
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "metadata_license": "Apache-2.0 OR BSD-2-Clause",
+      "scope": "build",
+      "filename": "packaging-26.3-py3-none-any.whl",
+      "bytes": 129956
+    },
+    {
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.8",
+      "url": "https://files.pythonhosted.org/packages/8f/f1/3eee0263b487e571aed9204257b45bc2a0b6fec34d0a1adade4d8d8a968c/pyinstaller_hooks_contrib-2026.8-py3-none-any.whl",
+      "sha256": "6d21d65323ea4467753afc21f52d7d0e69416ae8101dd88269bf273ad48db084",
+      "metadata_license": null,
+      "scope": "build",
+      "filename": "pyinstaller_hooks_contrib-2026.8-py3-none-any.whl",
+      "bytes": 462145
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0",
+      "url": "https://files.pythonhosted.org/packages/95/9c/c510029fc6ef33a6275cd2c5d3cecd6613dfd6aa401d57c54f1c18852ccf/setuptools-84.0.0-py3-none-any.whl",
+      "sha256": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670",
+      "metadata_license": "MIT",
+      "scope": "build",
+      "filename": "setuptools-84.0.0-py3-none-any.whl",
+      "bytes": 818216
+    }
+  ]
+}

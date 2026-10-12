@@ -1,0 +1,4 @@
+module RemoteTransferBridge {
+    header "SPFTPTransfer.h"
+    export *
+}

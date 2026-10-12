@@ -1,0 +1,12 @@
+LOCAL GPL PROTOTYPE ONLY - NOT RELEASE CLEARED
+
+The linked playback stack includes GPL components such as mpv/FFmpeg/rubberband.
+ISC permissions in the API headers do not change the linked runtime's licenses.
+This bootstrap extracts only the dependency closure of IINA's official libmpv.
+IINA UI, assets, Sparkle, and IINA executable are not copied or launched.
+The original upstream license texts saved here are an initial notice set, not
+a complete per-library license/copyright audit or corresponding-source archive.
+Before any distribution, inventory every bundled library; preserve all notices;
+provide complete corresponding source and build/patch scripts as required;
+and confirm GPL compatibility for the whole application. Closed-source
+compatibility is not claimed. This bundle is not approved for App Store release.

@@ -1,0 +1,432 @@
+{
+  "schema": 2,
+  "recorded_at": "2026-10-03T21:53:47.837363+00:00",
+  "scope": "Pinned acquisition catalog for real 4K test media. Versioned JSON and small HLS source snapshots only; media is ignored and is never packaged with the application.",
+  "total_media_bytes": 1270339029,
+  "total_media_gib": 1.183095415122807,
+  "tools": {
+    "ffmpeg_version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe_version": "ffprobe version 9.0.1 Copyright (c) 2007-2026 the FFmpeg developers",
+    "ffmpeg_sha256": "453b3492e4f9f16695ad9b4c768c8722fed1dd88d6b523e9d82c6cc636661b7d",
+    "ffprobe_sha256": "10333244662b64bdd93226a92b3f395a973a986e6c6283e5b3acca77f59c1c14"
+  },
+  "existing_fixture_review": {
+    "path": "Tests/Fixtures/extended/manifest.json",
+    "finding": "Existing h264-4k and hevc-4k are genuinely 3840x2160 but generated lavfi testsrc2/sine fixtures, not film footage. Kept unchanged and excluded from this real-content collection."
+  },
+  "assets": [
+    {
+      "file": "apple-tv-trailer_av1-main10_sdr_4k24.mp4",
+      "path": "Tests/Fixtures/HighResolution/apple-tv-trailer_av1-main10_sdr_4k24.mp4",
+      "bytes": 256021569,
+      "sha256": "9bc51eb9817bce313f6cc68d381574035d59fe89d91a96bf9ca330f41cd330c4",
+      "duration_seconds": 98.475667,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": {
+        "codec_name": "av1",
+        "profile": "Main",
+        "codec_tag_string": "av01",
+        "width": 3840,
+        "height": 2160,
+        "r_frame_rate": "24000/1001",
+        "avg_frame_rate": "24000/1001",
+        "pix_fmt": "yuv420p10le",
+        "bits_per_raw_sample": "unspecified",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "bit_rate": "20646612",
+        "side_data_list": "unspecified"
+      },
+      "audio": [
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bit_rate": "157244",
+          "duration": "98.475667"
+        }
+      ],
+      "source": {
+        "kind": "lossless_container_remux_from_official_hls",
+        "title": "Apple TV Trailer developer streaming example",
+        "author": "Apple Inc. / Apple TV",
+        "source_page": "https://developer.apple.com/streaming/examples/",
+        "detail_page": "https://developer.apple.com/streaming/examples/tv-trailer-av1.html",
+        "master_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/av1-sample/av1-sample.m3u8",
+        "video_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/av1-sample/Job2dae5735-d6ca-48ca-91be-0ec0bead535c-107702578-hls_bundle_av1hls598_3840_20M/prog_index.m3u8",
+        "audio_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/av1-sample/Job932393e2-1e4f-4fdb-ab59-0d201f752656-107660254-Transcode_audio_en_stereo160_audio/prog_index.m3u8",
+        "source_stream_inf": "#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=20808145,BANDWIDTH=38604831,VIDEO-RANGE=SDR,CODECS=\"av01.0.12M.10.0.111.01.01.01.0,mp4a.40.2\",RESOLUTION=3840x2160,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,AUDIO=\"aaclc-48-160\",SUBTITLES=\"subtitles\"",
+        "license": "Official developer test sample; no open redistribution license established",
+        "permission_basis": "Apple publishes these streams as developer streaming examples for testing. The AV1 example is explicitly marked for testing only. Retained for local player testing; exclude from application packages and redistribution.",
+        "license_evidence_url": "https://developer.apple.com/streaming/examples/",
+        "changes": "Official 4K video and stereo AAC rendition fetched and remuxed with -c copy. No video/audio encoding, resizing, frame-rate conversion, looping or bit-depth upconversion.",
+        "remux_command": [
+          "Vendor/tools/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "warning",
+          "-y",
+          "-rw_timeout",
+          "25000000",
+          "-i",
+          "https://devstreaming-cdn.apple.com/videos/streaming/examples/av1-sample/Job2dae5735-d6ca-48ca-91be-0ec0bead535c-107702578-hls_bundle_av1hls598_3840_20M/prog_index.m3u8",
+          "-rw_timeout",
+          "25000000",
+          "-i",
+          "https://devstreaming-cdn.apple.com/videos/streaming/examples/av1-sample/Job932393e2-1e4f-4fdb-ab59-0d201f752656-107660254-Transcode_audio_en_stereo160_audio/prog_index.m3u8",
+          "-map",
+          "0:v:0",
+          "-map",
+          "1:a:0",
+          "-c",
+          "copy",
+          "-movflags",
+          "+faststart",
+          "Tests/Fixtures/HighResolution/apple-tv-trailer_av1-main10_sdr_4k24.mp4"
+        ],
+        "snapshots": {
+          "video": {
+            "snapshot": "snapshots/apple-tv-trailer_av1-main10_sdr_4k24.mp4.video.m3u8",
+            "sha256": "01dac11e4b8b051c5abdd94f5bd1d5304c293bef07ca263a5b1c3b8763f0399a"
+          },
+          "audio": {
+            "snapshot": "snapshots/apple-tv-trailer_av1-main10_sdr_4k24.mp4.audio.m3u8",
+            "sha256": "703999bc2827570390ee59cab15cff1482be1b2e51909b327911a47c79490f4f"
+          },
+          "master": {
+            "snapshot": "snapshots/apple-av1-master.m3u8",
+            "sha256": "2b2f7def97e5fc07f074e359696788865da7f59920c6c0d589bc500822107391"
+          }
+        }
+      },
+      "compressed_payload": {
+        "algorithm": "ffprobe-packet-chain-sha256-v1",
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "av1",
+            "extradata_sha256": "SHA256:6fa5de9d19e76d32e7935bcd661e68d7eb6434a4365e74cbfe8ad614f113dda8",
+            "packet_count": 2360,
+            "packet_bytes": 254035058,
+            "payload_sha256": "01fa9c90a54d23cc0f06ef3bc5cfc91e22d82071c5d02d1e6bdb48d2329ff97c"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "extradata_sha256": "SHA256:b65f22439176f7827a0d82a66b34477888f0287450985d8e3dc836d7e32ce79b",
+            "packet_count": 4617,
+            "packet_bytes": 1935593,
+            "payload_sha256": "c81d836ccb6b9568429ae805ff08717a54584988359ed6f69d8cc10905c9a6a1"
+          }
+        ]
+      }
+    },
+    {
+      "file": "apple-tv-trailer_hevc-main10_hdr10plus_4k24.mp4",
+      "path": "Tests/Fixtures/HighResolution/apple-tv-trailer_hevc-main10_hdr10plus_4k24.mp4",
+      "bytes": 187879156,
+      "sha256": "01441d66263f2bfab3050e2e04ae6bc7d9bb90e8d5c4ae91abfc8ba316ae3fde",
+      "duration_seconds": 98.475667,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": {
+        "codec_name": "hevc",
+        "profile": "Main 10",
+        "codec_tag_string": "hvc1",
+        "width": 3840,
+        "height": 2160,
+        "r_frame_rate": "24000/1001",
+        "avg_frame_rate": "24000/1001",
+        "pix_fmt": "yuv420p10le",
+        "bits_per_raw_sample": "unspecified",
+        "color_range": "tv",
+        "color_space": "bt2020nc",
+        "color_transfer": "smpte2084",
+        "color_primaries": "bt2020",
+        "chroma_location": "topleft",
+        "bit_rate": "15106840",
+        "side_data_list": "unspecified"
+      },
+      "audio": [
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bit_rate": "157244",
+          "duration": "98.475667"
+        }
+      ],
+      "source": {
+        "kind": "lossless_container_remux_from_official_hls",
+        "title": "Apple TV Trailer developer streaming example",
+        "author": "Apple Inc. / Apple TV",
+        "source_page": "https://developer.apple.com/streaming/examples/",
+        "detail_page": "https://developer.apple.com/streaming/examples/advanced-stream-dv-atmos.html",
+        "master_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8",
+        "video_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job8208634a-0add-4223-9782-600c14a70339-139240443-hls_bundle_hdrhls797_hdr10plus/prog_index.m3u8",
+        "audio_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job932393e2-1e4f-4fdb-ab59-0d201f752656-107660254-Transcode_audio_en_stereo160_audio/prog_index.m3u8",
+        "source_stream_inf": "#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=15270161,BANDWIDTH=29825447,VIDEO-RANGE=PQ,CODECS=\"hvc1.2.20000000.H150.B0,mp4a.40.2\",RESOLUTION=3840x2160,FRAME-RATE=23.976,CLOSED-CAPTIONS=\"cc\",AUDIO=\"aaclc-48-160\",SUBTITLES=\"subtitles\"",
+        "license": "Official developer test sample; no open redistribution license established",
+        "permission_basis": "Apple publishes these streams as developer streaming examples for testing. The AV1 example is explicitly marked for testing only. Retained for local player testing; exclude from application packages and redistribution.",
+        "license_evidence_url": "https://developer.apple.com/streaming/examples/",
+        "changes": "Official 4K video and stereo AAC rendition fetched and remuxed with -c copy. No video/audio encoding, resizing, frame-rate conversion, looping or bit-depth upconversion.",
+        "remux_command": [
+          "Vendor/tools/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "warning",
+          "-y",
+          "-rw_timeout",
+          "25000000",
+          "-i",
+          "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job8208634a-0add-4223-9782-600c14a70339-139240443-hls_bundle_hdrhls797_hdr10plus/prog_index.m3u8",
+          "-rw_timeout",
+          "25000000",
+          "-i",
+          "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job932393e2-1e4f-4fdb-ab59-0d201f752656-107660254-Transcode_audio_en_stereo160_audio/prog_index.m3u8",
+          "-map",
+          "0:v:0",
+          "-map",
+          "1:a:0",
+          "-c",
+          "copy",
+          "-movflags",
+          "+faststart",
+          "Tests/Fixtures/HighResolution/apple-tv-trailer_hevc-main10_hdr10plus_4k24.mp4"
+        ],
+        "hdr_note": "Source rendition is named HDR10+ with PQ advertised in the official master; actual transfer/primaries and any ffprobe-visible HDR metadata are recorded separately. This does not certify HDR output by the player/display.",
+        "snapshots": {
+          "video": {
+            "snapshot": "snapshots/apple-tv-trailer_hevc-main10_hdr10plus_4k24.mp4.video.m3u8",
+            "sha256": "91db63e419641a57feb27e33cb07060bc5086c09192cb8f1785180a1f1200d24"
+          },
+          "audio": {
+            "snapshot": "snapshots/apple-tv-trailer_hevc-main10_hdr10plus_4k24.mp4.audio.m3u8",
+            "sha256": "703999bc2827570390ee59cab15cff1482be1b2e51909b327911a47c79490f4f"
+          },
+          "master": {
+            "snapshot": "snapshots/apple-advanced-master.m3u8",
+            "sha256": "3288c3b8cf19658d24d5b85910c8901c17a4d1502171184d7458d4a1243c0292"
+          }
+        }
+      },
+      "compressed_payload": {
+        "algorithm": "ffprobe-packet-chain-sha256-v1",
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "hevc",
+            "extradata_sha256": "SHA256:2628ed00bbf1d9285b82dec8ecd5893b6c985de37ca230b1bd70733951de2caa",
+            "packet_count": 2360,
+            "packet_bytes": 185873941,
+            "payload_sha256": "fa1b0bd29bc6aeebae665d4c5c7af9a33de2d5e486270d2ca5d2e5cc629cc18c"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "extradata_sha256": "SHA256:b65f22439176f7827a0d82a66b34477888f0287450985d8e3dc836d7e32ce79b",
+            "packet_count": 4617,
+            "packet_bytes": 1935593,
+            "payload_sha256": "c81d836ccb6b9568429ae805ff08717a54584988359ed6f69d8cc10905c9a6a1"
+          }
+        ]
+      }
+    },
+    {
+      "file": "apple-tv-trailer_hevc-main10_sdr_4k24.mp4",
+      "path": "Tests/Fixtures/HighResolution/apple-tv-trailer_hevc-main10_sdr_4k24.mp4",
+      "bytes": 153214442,
+      "sha256": "c4be17460a5b2efe7e2f6c9f9907b474447a16e7c86b3a44d382c48fb1e9b4d9",
+      "duration_seconds": 98.475667,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": {
+        "codec_name": "hevc",
+        "profile": "Main 10",
+        "codec_tag_string": "hvc1",
+        "width": 3840,
+        "height": 2160,
+        "r_frame_rate": "24000/1001",
+        "avg_frame_rate": "24000/1001",
+        "pix_fmt": "yuv420p10le",
+        "bits_per_raw_sample": "unspecified",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "bit_rate": "12289480",
+        "side_data_list": "unspecified"
+      },
+      "audio": [
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bit_rate": "157244",
+          "duration": "98.475667"
+        }
+      ],
+      "source": {
+        "kind": "lossless_container_remux_from_official_hls",
+        "title": "Apple TV Trailer developer streaming example",
+        "author": "Apple Inc. / Apple TV",
+        "source_page": "https://developer.apple.com/streaming/examples/",
+        "detail_page": "https://developer.apple.com/streaming/examples/advanced-stream-dv-atmos.html",
+        "master_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8",
+        "video_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job2dae5735-d6ca-48ca-91be-0ec0bead535c-107702578-hls_bundle_hevchls597/prog_index.m3u8",
+        "audio_playlist": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job932393e2-1e4f-4fdb-ab59-0d201f752656-107660254-Transcode_audio_en_stereo160_audio/prog_index.m3u8",
+        "source_stream_inf": "#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=12452019,BANDWIDTH=26321918,VIDEO-RANGE=SDR,CODECS=\"hvc1.2.20000000.H150.B0,mp4a.40.2\",RESOLUTION=3840x2160,FRAME-RATE=23.976,CLOSED-CAPTIONS=\"cc\",AUDIO=\"aaclc-48-160\",SUBTITLES=\"subtitles\"",
+        "license": "Official developer test sample; no open redistribution license established",
+        "permission_basis": "Apple publishes these streams as developer streaming examples for testing. The AV1 example is explicitly marked for testing only. Retained for local player testing; exclude from application packages and redistribution.",
+        "license_evidence_url": "https://developer.apple.com/streaming/examples/",
+        "changes": "Official 4K video and stereo AAC rendition fetched and remuxed with -c copy. No video/audio encoding, resizing, frame-rate conversion, looping or bit-depth upconversion.",
+        "remux_command": [
+          "Vendor/tools/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "warning",
+          "-y",
+          "-rw_timeout",
+          "25000000",
+          "-i",
+          "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job2dae5735-d6ca-48ca-91be-0ec0bead535c-107702578-hls_bundle_hevchls597/prog_index.m3u8",
+          "-rw_timeout",
+          "25000000",
+          "-i",
+          "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/Job932393e2-1e4f-4fdb-ab59-0d201f752656-107660254-Transcode_audio_en_stereo160_audio/prog_index.m3u8",
+          "-map",
+          "0:v:0",
+          "-map",
+          "1:a:0",
+          "-c",
+          "copy",
+          "-movflags",
+          "+faststart",
+          "Tests/Fixtures/HighResolution/apple-tv-trailer_hevc-main10_sdr_4k24.mp4"
+        ],
+        "snapshots": {
+          "video": {
+            "snapshot": "snapshots/apple-tv-trailer_hevc-main10_sdr_4k24.mp4.video.m3u8",
+            "sha256": "474b844e25d5c2c141f9028f6bfdd07eca3471cab0730a1fd9d0e8e041a4ecae"
+          },
+          "audio": {
+            "snapshot": "snapshots/apple-tv-trailer_hevc-main10_sdr_4k24.mp4.audio.m3u8",
+            "sha256": "703999bc2827570390ee59cab15cff1482be1b2e51909b327911a47c79490f4f"
+          },
+          "master": {
+            "snapshot": "snapshots/apple-advanced-master.m3u8",
+            "sha256": "3288c3b8cf19658d24d5b85910c8901c17a4d1502171184d7458d4a1243c0292"
+          }
+        }
+      },
+      "compressed_payload": {
+        "algorithm": "ffprobe-packet-chain-sha256-v1",
+        "streams": [
+          {
+            "codec_type": "video",
+            "codec_name": "hevc",
+            "extradata_sha256": "SHA256:324ae6023a77bad1d04e6b4e1eaec60d6ab70fee6b94b6c2b72368690545214f",
+            "packet_count": 2360,
+            "packet_bytes": 151209255,
+            "payload_sha256": "ba946c7e9235c0395781ab3c2403c7b2088879f25ad506457d4d0f2cd1cd3199"
+          },
+          {
+            "codec_type": "audio",
+            "codec_name": "aac",
+            "extradata_sha256": "SHA256:b65f22439176f7827a0d82a66b34477888f0287450985d8e3dc836d7e32ce79b",
+            "packet_count": 4617,
+            "packet_bytes": 1935593,
+            "payload_sha256": "c81d836ccb6b9568429ae805ff08717a54584988359ed6f69d8cc10905c9a6a1"
+          }
+        ]
+      }
+    },
+    {
+      "file": "bbb_sunflower_2160p_60fps_normal.mp4",
+      "path": "Tests/Fixtures/HighResolution/bbb_sunflower_2160p_60fps_normal.mp4",
+      "bytes": 673223862,
+      "sha256": "35db9a007021f1b0066993e1d2c4448c83a8b279f799c97d33cbba73980a8a36",
+      "duration_seconds": 634.566666,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": {
+        "codec_name": "h264",
+        "profile": "High",
+        "codec_tag_string": "avc1",
+        "width": 3840,
+        "height": 2160,
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1",
+        "pix_fmt": "yuv420p",
+        "bits_per_raw_sample": "8",
+        "color_range": "unspecified",
+        "color_space": "unspecified",
+        "color_transfer": "unspecified",
+        "color_primaries": "unspecified",
+        "chroma_location": "left",
+        "bit_rate": "8002648",
+        "side_data_list": "unspecified"
+      },
+      "audio": [
+        {
+          "index": 1,
+          "codec_name": "mp3",
+          "profile": "unspecified",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bit_rate": "160000",
+          "duration": "634.200000"
+        },
+        {
+          "index": 2,
+          "codec_name": "ac3",
+          "profile": "unspecified",
+          "sample_rate": "48000",
+          "channels": 6,
+          "channel_layout": "5.1(side)",
+          "bit_rate": "320000",
+          "duration": "634.144000"
+        }
+      ],
+      "source": {
+        "kind": "original_compressed_movie_download",
+        "title": "Big Buck Bunny, Sunflower version",
+        "author": "Blender Foundation 2008; Janus Bager Kristensen 2013",
+        "source_page": "https://peach.blender.org/download/",
+        "download_url": "https://download.blender.org/demo/movies/BBB/bbb_sunflower_2160p_60fps_normal.mp4.zip",
+        "archive_bytes": 671868845,
+        "archive_sha256": "8f1d53cf56a314be08206ae730546ef26db9fd0114b33ff2528f522bc3714d19",
+        "license": "Creative Commons Attribution 3.0 Unported",
+        "license_evidence_url": "https://peach.blender.org/about/",
+        "embedded_license_evidence": "Creative Commons Attribution 3.0 - http://bbb3d.renderfarming.net",
+        "attribution": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org; Sunflower version by Janus Bager Kristensen 2013",
+        "changes": "ZIP extraction only; movie bytes not re-encoded; original credits retained."
+      }
+    }
+  ],
+  "limitations": [
+    "BBB H.264 is native 4K60 8-bit SDR with color metadata unspecified.",
+    "Apple HEVC SDR, HEVC HDR10+ and AV1 examples are native 4K 23.976 fps, not 4K60.",
+    "No VP9 4K asset or native HEVC 4K60 asset acquired in this initial set.",
+    "No codec derivation/re-encoding performed; no CPU encoding required.",
+    "Apple test assets are local-only and must not be shipped in the application package.",
+    "Ten-bit SDR and PQ source metadata are not evidence of correct HDR display output."
+  ],
+  "container_reproducibility": {
+    "assessment": "The original Apple MP4 probes contain a fixed Lavf63.1.101 encoder tag and no creation_time tag, so no observed wall-clock metadata is present. Identical remote HLS remuxing was not repeated; bit-identical container reproducibility has not been established.",
+    "policy": "Recorded container size and SHA256 are preferred. Apple remuxes may be accepted only if every recorded compressed packet-chain fingerprint, codec configuration and expected probe parameter matches. Original BBB ZIP and MP4 require exact hashes.",
+    "fingerprint_algorithm": "ffprobe-packet-chain-sha256-v1",
+    "fingerprint_scope": "Each ordered video/audio stream: codec/type, extradata hash, packet count, packet byte count and SHA256(domain || uint64-be packet size || packet SHA256). Excludes container tags, packet timestamps and inter-stream packet ordering. Timing is validated separately by total duration/frame-rate/audio parameters."
+  }
+}

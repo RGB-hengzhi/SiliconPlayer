@@ -1,0 +1,4 @@
+module MetalRenderBridge {
+    header "MetalRenderBridge.h"
+    export *
+}

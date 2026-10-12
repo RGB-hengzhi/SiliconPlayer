@@ -1,0 +1,231 @@
+{
+  "schema": 1,
+  "origin": "Existing exact signed arm64 libmpv compatible closure",
+  "closedDonorSummarySHA256": "4c5b7bc1dc81f51df7a0939f61c6f0f3535c9f0ef7956d644adf49c5bbecabb9",
+  "closedDonorLibraryClosureSHA256": "2e2a85d2bebc8d0495fcc7657d11efe252ec94180be4c64e66ae7c873fa09489",
+  "libraries": {
+    "libSvtAv1Enc.4.dylib": {
+      "bytes": 4333216,
+      "sha256": "b04799102fa2002243b945ec86930561e831591e29d29b5bee399a42b13c7ca6",
+      "mode": 448
+    },
+    "libarchive.13.dylib": {
+      "bytes": 807584,
+      "sha256": "9a1d3750376a8c9dd2990eb925f0f198dd938a2c7ba440d62bda72251ae53c6f",
+      "mode": 448
+    },
+    "libass.9.dylib": {
+      "bytes": 247840,
+      "sha256": "cf9360d32f674a2954b499d2a3ffa81cea01515820eeb07a3c2cc0f6f821a197",
+      "mode": 448
+    },
+    "libavcodec.63.dylib": {
+      "bytes": 13155488,
+      "sha256": "dada1df279a92b379109567292bb9b29dcb529acd0356a2f40cc3f9ebc6b6034",
+      "mode": 448
+    },
+    "libavdevice.63.dylib": {
+      "bytes": 98336,
+      "sha256": "af6edc7c53328b470b06f09cfcb95112cdefa50e969f84f49366470b347f9237",
+      "mode": 448
+    },
+    "libavfilter.12.dylib": {
+      "bytes": 4288640,
+      "sha256": "f762b87dcab8989ca34fdeefb18ebd50467456c37e98e0225648cd1b7d0baa79",
+      "mode": 448
+    },
+    "libavformat.63.dylib": {
+      "bytes": 2625936,
+      "sha256": "8fc0375b158abf39260550f4a1a1b6f76870fbe432afcdb13d52d9e19526e1ca",
+      "mode": 448
+    },
+    "libavutil.61.dylib": {
+      "bytes": 740624,
+      "sha256": "fbc487e70f0660039b7689e14d29dc0472ac9779d99dea5e15e6d733356bbd21",
+      "mode": 448
+    },
+    "libbluray.3.dylib": {
+      "bytes": 391616,
+      "sha256": "2e8e7283345edb98369deb48e3f229bf0bdbc04ec742bac9934fcbac1b791aed",
+      "mode": 448
+    },
+    "libbrotlicommon.1.dylib": {
+      "bytes": 182304,
+      "sha256": "0eb46b4a2a2da24829aec85ae83f4724a16f09654cc47def61c7b9f10a0bdcea",
+      "mode": 448
+    },
+    "libbrotlidec.1.dylib": {
+      "bytes": 85936,
+      "sha256": "3fcc91f2aba21a9acf62795452ad8109a744fd9c3cbab5f593ab5fb6a1e7d39d",
+      "mode": 448
+    },
+    "libbrotlienc.1.dylib": {
+      "bytes": 766160,
+      "sha256": "9ea2b28b602fda5ffe0d74b87e08c3b8db29b1267e22369324b45028b4cdf86e",
+      "mode": 448
+    },
+    "libbs2b.0.dylib": {
+      "bytes": 53472,
+      "sha256": "4009ae59c8c66c8ae023e5ad9ab3b640d48c11d6ef802008d7bef998738022ba",
+      "mode": 448
+    },
+    "libdav1d.7.dylib": {
+      "bytes": 841408,
+      "sha256": "24b42326f1fd0fbf3a52113ae0811b8267438ac9044262bddcb0dd3c539b7642",
+      "mode": 448
+    },
+    "libfontconfig.1.dylib": {
+      "bytes": 385936,
+      "sha256": "c89f7c29ba616796479e90687504268ed431afb0e727df3cfaabec117be67dda",
+      "mode": 448
+    },
+    "libfreetype.6.dylib": {
+      "bytes": 761584,
+      "sha256": "3ed16b5a41dde0e8d3ac2c1b6dab3a8fc95956cb96c5bc75fcde8de95a0616bc",
+      "mode": 448
+    },
+    "libfribidi.0.dylib": {
+      "bytes": 169248,
+      "sha256": "4327a8841ce0bb7b4573c3c93bbefd9a2c505921cae3264874266d1ea3361dfb",
+      "mode": 448
+    },
+    "libharfbuzz.0.dylib": {
+      "bytes": 1427696,
+      "sha256": "7fdd7238a2de0823b5de93156b767a359d96ff4d8d4b0a0495222cacb74affc1",
+      "mode": 448
+    },
+    "libjpeg.62.dylib": {
+      "bytes": 648176,
+      "sha256": "0ef338fbabd85278d467e1fcd8309cc7c215a67617c18e0a49809571c300c25c",
+      "mode": 448
+    },
+    "libjxl.0.11.dylib": {
+      "bytes": 2423312,
+      "sha256": "dfdb6271cdc739b4d9b7e3c98fb864fde99835ce3f968095d70de95b9e2ec9d3",
+      "mode": 448
+    },
+    "libjxl_cms.0.11.dylib": {
+      "bytes": 435184,
+      "sha256": "e33de0cba5b60852e30fe87e0b45bd6653fa3efb38d4ca9dc965a0ad5283d327",
+      "mode": 448
+    },
+    "libjxl_threads.0.11.dylib": {
+      "bytes": 53824,
+      "sha256": "3c403bfc410791473f01d9faf49c8a397de5fe7abd3b50a14234c6230f741804",
+      "mode": 448
+    },
+    "liblcms2.2.dylib": {
+      "bytes": 402704,
+      "sha256": "c8aafe2a7862d13cc4ca2537ee9e2a75670c30d784b77ef6f2163f757976afb3",
+      "mode": 448
+    },
+    "libluajit-5.1.2.dylib": {
+      "bytes": 704384,
+      "sha256": "efbdefa849b61098aba26b8534fe76985c52133f9fe4e846d848c97b648644ec",
+      "mode": 448
+    },
+    "liblz4.1.dylib": {
+      "bytes": 193760,
+      "sha256": "479537d06f34962fbb1be38ae96a15ab1ecd80ac2411878566187ed7abce82be",
+      "mode": 448
+    },
+    "libmpv.2.dylib": {
+      "bytes": 4199392,
+      "sha256": "e061790f5ca5fbcbd33eccf93240fd70184cd8e04c1d680aeb45f02c6abe7daf",
+      "mode": 448
+    },
+    "libmujs.dylib": {
+      "bytes": 402976,
+      "sha256": "6614b9f70d17df4cbb07f7909caca99dc23d078828c00627101b41e113d61f09",
+      "mode": 448
+    },
+    "libogg.0.dylib": {
+      "bytes": 70160,
+      "sha256": "ef8487813da0bfcea63c90c85ecb021a073310f2194426c857d3b4aa533ed07d",
+      "mode": 448
+    },
+    "libplacebo.365.dylib": {
+      "bytes": 7159360,
+      "sha256": "448b340b7d9436a2abc8079cdd41d01d69ff30ef6d28c3740cd885abe13769ca",
+      "mode": 448
+    },
+    "librubberband.3.dylib": {
+      "bytes": 441584,
+      "sha256": "3e94847cdb67c4944425c8f4c106a06f6347058e33458168e14e9ede6bf28101",
+      "mode": 448
+    },
+    "libsharpyuv.0.dylib": {
+      "bytes": 67872,
+      "sha256": "f259287a21c949ca3e4e5a05c62fd5a4643b1f45fdf84dd10999ce162decfbc4",
+      "mode": 448
+    },
+    "libsoxr.0.dylib": {
+      "bytes": 205696,
+      "sha256": "66148102b606c392deea89c1e397a3c325cf2c5bacf5d7cdf24b74190cefbf32",
+      "mode": 448
+    },
+    "libspeex.1.dylib": {
+      "bytes": 173392,
+      "sha256": "bc1e53aba34f428c7681fb16f0ef4a1007eb2ff3bce24ed89408115b4410e792",
+      "mode": 448
+    },
+    "libswresample.7.dylib": {
+      "bytes": 136640,
+      "sha256": "fa1eb6484066062e0c1a639c76a5af5de46908650adce0a50bcddc4ec8088086",
+      "mode": 448
+    },
+    "libswscale.10.dylib": {
+      "bytes": 1211376,
+      "sha256": "a09e923888f3a77186078406f420c1e326dbdacc58dd9bb0dc12c827dae4f3c7",
+      "mode": 448
+    },
+    "libuchardet.0.dylib": {
+      "bytes": 221776,
+      "sha256": "6848c129ffa26ab43e07dc2d44a98889506679583815efa1adcfa26b5d340446",
+      "mode": 448
+    },
+    "libudfread.3.dylib": {
+      "bytes": 52976,
+      "sha256": "66152e6943ef04a0d0cb125550c4f944b1bb6d4ef4654497a60cbda30bccdd5a",
+      "mode": 448
+    },
+    "libunibreak.7.dylib": {
+      "bytes": 191376,
+      "sha256": "096149b6d53ae967322383511e6b78d4fb183e6e2a9aaba61cb80b9ebe9918ba",
+      "mode": 448
+    },
+    "libvorbis.0.dylib": {
+      "bytes": 256160,
+      "sha256": "ba48848e94af7c27ba712ee7e428a426723ce2153ee52bb8fb9fdf8f3af81aa4",
+      "mode": 448
+    },
+    "libvorbisenc.2.dylib": {
+      "bytes": 749584,
+      "sha256": "c8f9c4a5d7077f1350ca0cad08be06a5edd2cd8e35b074bf2b279d9fba220232",
+      "mode": 448
+    },
+    "libwebp.7.dylib": {
+      "bytes": 494688,
+      "sha256": "9ed363c7f5fdb673c9f9aa737170bde3d5db61fc41c61e5e475f0d9d38d9508a",
+      "mode": 448
+    },
+    "libwebpmux.3.dylib": {
+      "bytes": 87808,
+      "sha256": "57ee24d639509acf0a4875ad9bc4aaebc2e97cd231be74423479186acedcff07",
+      "mode": 448
+    },
+    "libzimg.2.dylib": {
+      "bytes": 373664,
+      "sha256": "181e4b354c4077906af1085a787f3be0a27bf580a15bad01c612e673d79dfc7b",
+      "mode": 448
+    },
+    "libzstd.1.dylib": {
+      "bytes": 810064,
+      "sha256": "b279fc6b7ec994752653d9173249638cc59f38ad5e72b5c3af073036bd1ad140",
+      "mode": 448
+    }
+  },
+  "playbackABIAndCSourceUnchanged": true,
+  "historicalAppResultsInherited": false,
+  "runtimeTestsPending": true
+}

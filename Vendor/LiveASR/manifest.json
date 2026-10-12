@@ -1,0 +1,261 @@
+{
+  "schema": 1,
+  "profileID": "zipformer-zh-int8-2025-06-30/sherpa-1.13.8/cpu2/spcm-v1",
+  "files": [
+    {
+      "path": "headers/libavcodec/avcodec.h",
+      "bytes": 108600,
+      "sha256": "324452903f0d3b4bb4078652ca32c9ca29d7b3db5e005e1af04487409bd3090d"
+    },
+    {
+      "path": "headers/libavcodec/codec.h",
+      "bytes": 11788,
+      "sha256": "ad4550b3f8ff7c7dd1c79a373721ba43273c4d1f156c683e11e27f9b5d89be1a"
+    },
+    {
+      "path": "headers/libavcodec/codec_desc.h",
+      "bytes": 4264,
+      "sha256": "d1fc6e89a3a7e49e61893620e00256d4f00db994764435ebe159b46a3c4326b5"
+    },
+    {
+      "path": "headers/libavcodec/codec_id.h",
+      "bytes": 18573,
+      "sha256": "765765fee16f9551ebd4fb5441fc6e5fc3d93c4754703831673bf887f2b1c87d"
+    },
+    {
+      "path": "headers/libavcodec/codec_par.h",
+      "bytes": 8400,
+      "sha256": "c33270179f2d44d94a75438923400f6a1c6dacf7b755692e723e3101cbeb65d3"
+    },
+    {
+      "path": "headers/libavcodec/defs.h",
+      "bytes": 13333,
+      "sha256": "f1d391ac2417702b59b7a4b6ae3927eea8c8b5e9858ae9ade6fdd009a60bd9ce"
+    },
+    {
+      "path": "headers/libavcodec/packet.h",
+      "bytes": 32798,
+      "sha256": "2e10c19c2fd953a5f18198eea1106334254d963f86df7999857c293dee8ac056"
+    },
+    {
+      "path": "headers/libavcodec/version.h",
+      "bytes": 1619,
+      "sha256": "51681f1efe6edff28119f805aaa1cf0ef7a0043e1b68a9ae09a76d92056c4775"
+    },
+    {
+      "path": "headers/libavcodec/version_major.h",
+      "bytes": 1629,
+      "sha256": "4ce6f0974cff7069900045ee551001bb57902a2f5ec0b5f538fbc1e4e9f6aa83"
+    },
+    {
+      "path": "headers/libavformat/avformat.h",
+      "bytes": 121793,
+      "sha256": "694da025f30497481f4703e06de106bd417a5718f8fdcdf5e09e34f4b5f21114"
+    },
+    {
+      "path": "headers/libavformat/avio.h",
+      "bytes": 31178,
+      "sha256": "30312971fc299e65bc69cf1beddb76f50394e044d9c71fe32fec3ae9c13bd1af"
+    },
+    {
+      "path": "headers/libavformat/version.h",
+      "bytes": 1652,
+      "sha256": "d9bb073f747dd8fa5039eda8a0cc8322e9c61494f2b3df46ed35e4e6010b05fc"
+    },
+    {
+      "path": "headers/libavformat/version_major.h",
+      "bytes": 1876,
+      "sha256": "436db6c1b56db87e83682639fd0285e8b0138acc4fb572868c70a690eda7bb5e"
+    },
+    {
+      "path": "headers/libavutil/arm/intmath.h",
+      "bytes": 3884,
+      "sha256": "afedaaa7d138f96cbc3634aa8f6cbb003903dcd8dec7ea53d1c36b7c52101ed1"
+    },
+    {
+      "path": "headers/libavutil/attributes.h",
+      "bytes": 6672,
+      "sha256": "041300e50a7e4c97d5ab3ea8c92d3db637e7047c8cb021f64ead2874391ee954"
+    },
+    {
+      "path": "headers/libavutil/attributes_internal.h",
+      "bytes": 1794,
+      "sha256": "3cc99d4b6f9ca40913bfe539a300ddd84ec9cf15e0fd51d2d7a28405d9dbe8b2"
+    },
+    {
+      "path": "headers/libavutil/avconfig.h",
+      "bytes": 180,
+      "sha256": "975611ad5eba15212d9e1d5fca9d4fdf0daec6d2269b2fcab8e29af8667164bc"
+    },
+    {
+      "path": "headers/libavutil/avutil.h",
+      "bytes": 8702,
+      "sha256": "01a511d927eaab20cf57076611ff5649bc6089d2d766c4b20c9d11c3da095efd"
+    },
+    {
+      "path": "headers/libavutil/buffer.h",
+      "bytes": 11998,
+      "sha256": "f16742d574216434580573a2b09f56fc5b66b7dda1960d4f02ba59e3269ba548"
+    },
+    {
+      "path": "headers/libavutil/channel_layout.h",
+      "bytes": 34091,
+      "sha256": "fbd3246297cd72be45268eacd9229d23247dfe394fb15b6a40ce8773422661c6"
+    },
+    {
+      "path": "headers/libavutil/common.h",
+      "bytes": 17359,
+      "sha256": "08f14cf0ea3fede141d3790b30df2ed6edfc5dd81eb3c8181c3a33c314c46bbb"
+    },
+    {
+      "path": "headers/libavutil/cpu.h",
+      "bytes": 6857,
+      "sha256": "52034bd08c5fa7b476451acb4578152bfd88e650774a92c107c810e820314063"
+    },
+    {
+      "path": "headers/libavutil/dict.h",
+      "bytes": 9521,
+      "sha256": "b8b7abebb6e5ab5ffa70b8463df52c96d4e774aa2d5574bebbc02f6031e62ad8"
+    },
+    {
+      "path": "headers/libavutil/error.h",
+      "bytes": 5555,
+      "sha256": "bcf4f7e69c7e0d658ad6e81611810f7cf1f0b8334ebe948d27e518c459e4104c"
+    },
+    {
+      "path": "headers/libavutil/frame.h",
+      "bytes": 43901,
+      "sha256": "2eb83475589dbe72d9dbbb5367370b7c1384fbb20afffbcf482de0437b6eaf8e"
+    },
+    {
+      "path": "headers/libavutil/hwcontext.h",
+      "bytes": 24170,
+      "sha256": "229c918d0809dbbaa0aaebd18848bece039ad458538f0fcafc11015fd2111fc2"
+    },
+    {
+      "path": "headers/libavutil/internal.h",
+      "bytes": 4580,
+      "sha256": "ba779e92597fd8d11a50cec2afb9fcb95b7f7cb6a6f06280b4af28f3461de083"
+    },
+    {
+      "path": "headers/libavutil/intfloat.h",
+      "bytes": 1726,
+      "sha256": "3a29e4eebc8c269cfd867b96de91d8231773d392c12a8820e46eaba96d2b4ca1"
+    },
+    {
+      "path": "headers/libavutil/intmath.h",
+      "bytes": 4147,
+      "sha256": "25f09b4e16dd8edd21cba932f1503d5bc361bd5a6b3993e3cdd82b747128ab53"
+    },
+    {
+      "path": "headers/libavutil/libm.h",
+      "bytes": 14360,
+      "sha256": "e7f4417fba09554b12fb0cdb36ce72b7d24b2d2bfb9865b2bde1056ad0f72131"
+    },
+    {
+      "path": "headers/libavutil/log.h",
+      "bytes": 14088,
+      "sha256": "b8ef46be6210baadb3ad61eb72ee48e7dd7d6be39c17c3a8bbc8c81ba9e26110"
+    },
+    {
+      "path": "headers/libavutil/macros.h",
+      "bytes": 2304,
+      "sha256": "b63b3a268b096f0eed1e91b821714cff334e5dc5bb34365148704393ae15321e"
+    },
+    {
+      "path": "headers/libavutil/mathematics.h",
+      "bytes": 9565,
+      "sha256": "e85c71fb77b0fe7823a88db904982e2a9b953e806ced0714fe6cc6b8a0951469"
+    },
+    {
+      "path": "headers/libavutil/mem.h",
+      "bytes": 20457,
+      "sha256": "bf9a1d8c218c38b333efb16be076c5778d31d66a0691bdd6175f171c08283d7c"
+    },
+    {
+      "path": "headers/libavutil/mips/libm_mips.h",
+      "bytes": 2938,
+      "sha256": "3d983940bcab107144a6f1aa04e89d19e26c151efba6ff6f9093fe7ddf942e28"
+    },
+    {
+      "path": "headers/libavutil/opt.h",
+      "bytes": 46030,
+      "sha256": "ed473055a2c58dc24bc560d9c86dbbc51558c3e87836f1c0869011130783d999"
+    },
+    {
+      "path": "headers/libavutil/pixfmt.h",
+      "bytes": 47890,
+      "sha256": "6a8f5a61fe8d3bda60a62e59cc15237f61555ebd77adf477fc6d69ab8e609f77"
+    },
+    {
+      "path": "headers/libavutil/rational.h",
+      "bytes": 6287,
+      "sha256": "f4fb850924b414f9ca35579df4e50d6f406734eb9735bbfbf388ae22ec5a0a9c"
+    },
+    {
+      "path": "headers/libavutil/riscv/cpu.h",
+      "bytes": 2216,
+      "sha256": "29004372fbf6cef4955687607310817617fb018354235b684d7b372c74af4df0"
+    },
+    {
+      "path": "headers/libavutil/riscv/intmath.h",
+      "bytes": 6744,
+      "sha256": "41e5aaaa8ff7020114a542a2f0536904e845e818c7fa9bdbda55e3bb4fc55092"
+    },
+    {
+      "path": "headers/libavutil/samplefmt.h",
+      "bytes": 10270,
+      "sha256": "bec4e2708b42a026450c1227e137661f71850698f19b89f6e9f721fe993f56a9"
+    },
+    {
+      "path": "headers/libavutil/version.h",
+      "bytes": 4124,
+      "sha256": "0f2ba770c0abe2e341e1e52d34b0f092649a78169945956725b0afb9869a7766"
+    },
+    {
+      "path": "headers/libavutil/x86/intmath.h",
+      "bytes": 3411,
+      "sha256": "f2948aa2953afe5959c98c40e529cdb9972de995ca2e53f4efe3420fedb1186a"
+    },
+    {
+      "path": "headers/libswresample/swresample.h",
+      "bytes": 22361,
+      "sha256": "b23e625ab295d57a3d1ae0142c937b485dc386a36e4ed63f4b99ed886dc905e1"
+    },
+    {
+      "path": "headers/libswresample/version.h",
+      "bytes": 1707,
+      "sha256": "1f362ec3b24663a67a1623367294e818a3b6fc0ef0c4fd83c9c6b0cee54f42d4"
+    },
+    {
+      "path": "headers/libswresample/version_major.h",
+      "bytes": 1015,
+      "sha256": "c730cced7041664f716e82872850329b59fa965f1c93044ce37593bd14a59c40"
+    },
+    {
+      "path": "include/sherpa-onnx/c-api/c-api.h",
+      "bytes": 167657,
+      "sha256": "2a1b95084be8fd1deb3228fcad2fd3f7f0258b64582f7402281ec174c7b7f4ce"
+    },
+    {
+      "path": "lib/libonnxruntime.dylib",
+      "bytes": 28775120,
+      "sha256": "3567d114f7299d559993e536d605a6f46d7bc9d2542004accc80ee9bf5457f0b"
+    },
+    {
+      "path": "lib/libsherpa-onnx-c-api.dylib",
+      "bytes": 2999920,
+      "sha256": "ae729669633008692c670d4e4c942db7ea5bdc38abc2f479516062d48849e9d1"
+    },
+    {
+      "path": "lib/libsherpa-onnx-cxx-api.dylib",
+      "bytes": 180176,
+      "sha256": "7d9529551bea7e63d795a6c8d02b746bca06c1ab3080f2f14698d945b6810c8d"
+    }
+  ],
+  "packagePinsSHA256": "1be62637d68c97c18210264b767c8c0eb25f865f98d45613e134f7032127d0df",
+  "acquisitionManifest": "42 fixed acquisition files",
+  "distributionReady": false,
+  "licenseFiles": [],
+  "localPrototype": true
+}
