@@ -10,19 +10,23 @@ SiliconPlayer 希望把 PotPlayer 中常用的播放、字幕、列表与工具�
 
 *实际运行界面：播放画面、进度控制与播放列表。*
 
-[功能与使用](Docs/OVERVIEW.md) · [测试与资源实测](Docs/TESTING.md) · [开发说明](Docs/BUILDING.md)
+[功能与使用](Docs/OVERVIEW.md) · [测试与资源实测](Docs/TESTING.md) · [开发说明](Docs/BUILDING.md) · [依赖与对应源码](Docs/DEPENDENCIES.md)
 
-## 当前发布内容
+## 下载与开始使用
 
-当前先公开**源码、图文说明与测试摘要**。本地日常成品已经完成构建与测试，应用约 113 MiB；公共二进制发行还需要完成依赖许可与对应源码材料归档。
+1. 从 [GitHub Releases](https://github.com/RGB-hengzhi/SiliconPlayer/releases) 下载 `SiliconPlayer-0.6.0-core-arm64-public.zip`，解压后将 `SiliconPlayer.app` 拖到“应用程序”。
+2. 双击打开，按 **⌘O** 选择视频或音频，也可以拖入文件、多个文件或文件夹。成品自带播放与导出依赖，无需安装 Homebrew、Python、Xcode 或语音模型。
+3. 当前采用 **ad-hoc 签名，尚未完成 Apple 公证**。若首次打开被拦截，核对下载来源与 Release 的 SHA256 清单后，在“系统设置 → 隐私与安全性”为这个应用选择“仍要打开”，再确认“打开”。采用单个应用授权，不需要关闭 Gatekeeper。[Apple 官方说明](https://support.apple.com/zh-cn/102445)
 
-开发构建仅支持 M 系列 Mac，最低目标 macOS 14。在受控依赖准备完成后，可以运行：
+安装包、实际对应源码与依赖材料、校验清单在同一个 Release 提供。当前仅支持 Apple Silicon / arm64，最低目标 macOS 14；资源实测与验证边界见下文。
+
+开发者可在受控依赖准备完成后构建日常版：
 
 ```bash
 SILICONPLAYER_BUILD_PROFILE=core bash scripts/build_app.sh
 ```
 
-完整前置条件和当前复现边界见 [开发说明](Docs/BUILDING.md)。当前公开源码仓库没有提供成品下载，也没有宣称已完成 Apple 公证或 App Store 发布。
+完整源码资产、必要补丁与实际构建路线见 Release 的对应源码说明和 [开发说明](Docs/BUILDING.md)。构建对应源码不等于承诺在任意机器上生成每个字节都相同的二进制；也不能省略实际依赖源码、补丁或打包脚本。
 
 ## 日常功能
 
@@ -35,9 +39,9 @@ SILICONPLAYER_BUILD_PROFILE=core bash scripts/build_app.sh
 | 调整画面与声音 | 常用画面设置、用户滤镜、十段均衡器与输出设备选择 |
 | 保存与导出 | PNG/JPEG/WebP 截图、剪贴板、手动缩略图与拼图、MP4 片段、原码片段复制、完整 WAV 音频 |
 
-![中文字幕实测输出](Docs/images/subtitles.png)
+![主副字幕显示](Docs/images/subtitles.png)
 
-*实际视频截图输出：自制测试素材上的中文字幕，包含两行文字。*
+*实际字幕输出：英文副字幕位于上方，中文 ASS 主字幕位于下方。*
 
 WAV 导出保留输入采样率与声道，输出 16 位 PCM，使用 FFmpeg 默认源音轨选择。它导出完整音频，片段起止时间不用于 WAV；不保证跟随播放器当前选择的第二音轨。
 
@@ -47,7 +51,7 @@ WAV 导出保留输入采样率与声道，输出 16 位 PCM，使用 FFmpeg 默
 
 ![当前版本的 4K 播放资源实测](Docs/images/performance.svg)
 
-最终 **core build 13 r3** 通过 **140 个模块检查 + 30 个实际应用场景组**。4K H.264 60fps 约一分钟实测平均 CPU **12.65%**，稳定物理足迹峰值 **359.10 MiB**，解码与渲染均零丢帧。普通界面还实测了三种来源的 WAV 导出、中文字幕截图、启动器窗口复用，以及设置面板打开时的正常退出。
+封存功能基线 **core build 13 r3** 通过 **140 个模块检查 + 30 个实际应用场景组**。公开安装包补充许可证、对应源码入口等发行说明并重新签名、打包；未新增功能，不将元数据更新计为又运行一轮 170 项测试。4K H.264 60fps 约一分钟实测平均 CPU **12.65%**，稳定物理足迹峰值 **359.10 MiB**，解码与渲染均零丢帧。普通界面还实测了三种来源的 WAV 导出、中文字幕截图、启动器窗口复用，以及设置面板打开时的正常退出。
 
 测试设备为 Apple M6 / 16 GB / macOS 27.0.1，使用窗口内 SDR 素材。CPU 100% 约等于一个核心；物理足迹与 RSS 是不同指标。以上数据描述本次测试条件，完整计数、哈希与验证边界见 [测试摘要](Docs/TESTING.md)。
 
@@ -73,4 +77,6 @@ WAV 导出保留输入采样率与声道，输出 16 位 PCM，使用 FFmpeg 默
 - [libass](https://github.com/libass/libass)：ASS 字幕渲染。
 - [IINA](https://github.com/iina/iina)：原生 Mac 交互参考和最初播放依赖来源。
 
-界面使用 Swift / SwiftUI / AppKit 独立编写。当前仓库公开源码与开发文档，项目整体许可证尚未指定；源码可见不代表已授予新的开源使用许可。第三方代码继续适用各自许可证，已有许可说明随本机成品保留；完整依赖许可、对应源码与构建补丁仍需在公共二进制发行前归档。当前没有宣称整个应用已完成 GPL 兼容性审计。构建依赖与复现边界见 [开发说明](Docs/BUILDING.md)。
+原创部分 **Copyright © 2026 RGB-hengzhi (SiliconPlayer)**，采用 **GPL-3.0-or-later**，完整 GNU GPLv3 原文见 [LICENSE](LICENSE)。mpv API 头文件保留原 ISC 许可，第三方组件保留各自版权和许可，详见 [NOTICE](NOTICE.md) 与 [第三方说明](THIRD_PARTY.md)。
+
+按已有 GPL 条件提供应用及实际对应源码，不需要额外购买闭源替代商业授权。原创应用源码、实际依赖源码和补丁、构建与打包说明在同一 Release 免费提供；上游首页链接不能替代对应源码。构建依赖与复现边界见 [开发说明](Docs/BUILDING.md)。

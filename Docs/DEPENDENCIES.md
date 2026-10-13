@@ -5,6 +5,12 @@
 - 最初的播放依赖准备脚本为 scripts/bootstrap_mpv.py，来源为官方 IINA 发行包。最终本地 r3 使用 44 个固定版本的签名动态库，普通 bootstrap 不能保证重现最终包。
 - 媒体工具脚本 scripts/bootstrap_media_tools.py 默认还准备 Whisper 与模型，目前没有 core-only 一键安装入口。
 - core 打包模式只保留播放与 FFmpeg / FFprobe 工具；ASR、网页解析等可选内容不会随日常版本打包。
-- 完整新机依赖准备、第三方对应源码和补丁归档是后续发布工作。当前不要将源码克隆描述为开箱即用的二进制重建链路。
+- 本 Release 已提供实际 44 个运行库及 FFmpeg / FFprobe 的对应源码、定制补丁、构建材料和逐库校验清单。源码包内提供重建步骤；本轮未重新完成干净机的全链构建，因此普通源码克隆仍需先准备依赖。
 
 保留的许可证见 [NOTICE](../NOTICE.md)。可选语音和网页工具的已有文本也被保留，不能据此推断它们已包含在 core 或完成验收。
+
+## 0.6.0 日常公开版
+
+[依赖对应源码包](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.0-core/SiliconPlayer-0.6.0-core-dependency-source.zip)记录实际 r3 的 mpv v0.41.0-dev-g97179bce7-dirty、libplacebo 7.365.0 等版本、本地补丁、全部 44 个运行库的二进制 SHA256 和来源。
+
+`Vendor/licenses/SCOPE.txt` 是初始 IINA bootstrap 的历史准备状态，随原始源码保留以记录构建输入；它不是当前公开发行包的许可状态。公开包在应用内及 ZIP 外层提供 GPLv3、实际依赖原版权通知与对应源码入口，项目原创部分采用 GPL-3.0-or-later。

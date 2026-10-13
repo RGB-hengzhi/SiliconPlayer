@@ -1,6 +1,6 @@
 # 开发说明
 
-当前公开仓库保存 Swift / SwiftUI / AppKit 界面、播放集成、测试与构建脚本。本轮发布内容为源码与开发文档；开发构建需要 Apple Silicon Mac、Apple Command Line Tools、Python 3 以及已材料化和校验的播放库与媒体工具。
+当前公开仓库保存 Swift / SwiftUI / AppKit 界面、播放集成、测试与构建脚本。公开 Release 同时提供安装包、源码与开发文档；开发构建需要 Apple Silicon Mac、Apple Command Line Tools、Python 3 以及已材料化和校验的播放库与媒体工具。
 
 ## 构建日常版
 
@@ -22,7 +22,7 @@ SILICONPLAYER_BUILD_PROFILE=core bash scripts/build_app.sh
 
 `scripts/bootstrap_media_tools.py` 是完整开发依赖准备脚本，默认会同时准备 Whisper 和语音模型；当前没有独立的 core 依赖一键下载流程。仅为构建日常版时，不应把该命令当作轻量依赖安装入口。
 
-因此，当前说明提供的是**受控依赖已就绪后的构建入口**，尚未承诺新克隆可以完全自动复现最终成品。当前仓库不提供公共二进制下载。
+因此，当前说明提供的是**受控依赖已就绪后的构建入口**，尚未承诺新克隆可以完全自动复现最终成品。公开安装包与对应源码在 [v0.6.0-core Release](https://github.com/RGB-hengzhi/SiliconPlayer/releases/tag/v0.6.0-core) 同页提供。
 
 ## 测试
 
@@ -32,4 +32,10 @@ SILICONPLAYER_BUILD_PROFILE=core bash scripts/build_app.sh
 
 ## 第三方许可
 
-成熟播放能力来自 mpv、FFmpeg、libass 及其依赖。初始许可证文本和来源记录已保存，并随本机成品保留；它们不是完整的逐库许可审计或对应源码归档。项目整体许可证尚未指定，公开展示源码本身不授予新的许可。第三方源码保留其原有许可证与版权信息，公共二进制发行前需要完成逐库许可、完整对应源码与构建补丁归档。当前没有宣称整体 GPL 兼容、已获 App Store 发布许可或已完成 Apple 公证。
+成熟播放能力来自 mpv、FFmpeg、libass 及其依赖。初始许可证文本和来源记录已保存，并随本机成品保留；实际 44 库的对应源码、必要补丁、构建记录与完整许可证另在本 Release 的依赖源码包提供。原创应用代码已由版权所有人确认采用 GPL-3.0-or-later，第三方文件保留各自许可。第三方源码保留其原有许可证与版权信息，对应材料按实际发行库版本归档，并与公开安装包提供下载。本次采用 GPLv3 组合发行路线；未宣称获得 App Store 发布许可或完成 Apple 公证。
+
+## GPL 公开发行材料
+
+本项目原创部分采用 GPL-3.0-or-later，第三方文件保留原许可。公开 Release 同页提供应用与实际依赖对应源码、定制补丁、构建与打包控制材料。下载两个源码资产后先阅读其中 README / REBUILD，再准备受控依赖。记录式重放器已做语法与计划检查，尚未重跑从零全链构建；新工具链编译的结果需要重新验证。
+
+公开安装包的许可资源注入、外层签名和 ZIP 往返校验控制脚本见 [repack_public_bundle.py](../scripts/repack_public_bundle.py)。该步骤不重新编译功能代码；其输出校验值与旧封存 ZIP 不同。完整应用源码资产另含原302构建输入和成品构建控制器。
