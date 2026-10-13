@@ -12,6 +12,8 @@ private final class ScrubState: ObservableObject {
 
 private final class QueueViewState: ObservableObject {
     @Published var selection: Set<UUID> = []
+    @Published var canvasDropTargeted = false
+    @Published var playlistDropTargeted = false
     let dragSession = UUID()
 }
 
@@ -86,7 +88,17 @@ struct PlayerView: View {
                             .background(.regularMaterial, in: Capsule()).padding(.bottom, 20) }
                             .allowsHitTesting(false)
                     }
-                }.frame(maxWidth: .infinity, maxHeight: .infinity).contextMenu { playbackContextMenu }
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .contextMenu { playbackContextMenu }
+                    .onDrop(of: [.fileURL, .url], isTargeted: $queueState.canvasDropTargeted) { providers in
+                        DropLoader.load(providers) { player.open($0, append: false) }
+                        return !providers.isEmpty
+                    }
+                    .overlay {
+                        if queueState.canvasDropTargeted {
+                            Rectangle().strokeBorder(accent, lineWidth: 2).allowsHitTesting(false)
+                        }
+                    }
                 if player.showPlaylist && !player.miniMode { playlistPanel.frame(width: 260) }
             }
             if !player.miniMode { controls }
@@ -144,10 +156,6 @@ struct PlayerView: View {
             else { scrubState.previewWork?.cancel(); scrubState.preview = nil; if !ThumbnailTools.shared.generatingSheet { ThumbnailTools.shared.cancel() } }
         }
         .onChange(of: player.currentURL) { _, _ in scrubState.previewWork?.cancel(); scrubState.preview = nil }
-        .onDrop(of: [.fileURL, .url], isTargeted: nil) { providers in
-            DropLoader.load(providers) { player.open($0) }
-            return !providers.isEmpty
-        }
     }
 
     private var header: some View {
@@ -180,12 +188,24 @@ struct PlayerView: View {
     }
     private var welcome: some View {
         VStack(spacing: 18) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 24).fill(accent.opacity(0.08)).frame(width: 94, height: 94)
-                Image(systemName: "play.fill").font(.system(size: 34)).foregroundStyle(accent).offset(x: 3)
+            if !player.restoredQueueOnStartup {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 24).fill(accent.opacity(0.08)).frame(width: 94, height: 94)
+                    Image(systemName: "play.fill").font(.system(size: 34)).foregroundStyle(accent).offset(x: 3)
+                }
             }
-            Text("让每一帧，流畅呈现").font(.system(size: 25, weight: .semibold))
-            Text("拖入视频、音频或文件夹，即刻播放").font(.system(size: 13)).foregroundStyle(.secondary)
+            if player.restoredQueueOnStartup, let item = player.playlist.currentItem {
+                Text("已恢复 \(player.playlist.items.count) 项播放列表").font(.system(size: 25, weight: .semibold))
+                Text(item.title).font(.system(size: 13)).foregroundStyle(.secondary)
+                    .lineLimit(2).padding(.horizontal, 28)
+                Button { player.togglePause() } label: {
+                    Label("继续上次", systemImage: "play.fill").padding(.horizontal, 14).padding(.vertical, 5)
+                }.buttonStyle(.borderedProminent)
+                    .accessibilityLabel("继续上次播放")
+            } else {
+                Text("让每一帧，流畅呈现").font(.system(size: 25, weight: .semibold))
+                Text("拖入视频、音频或文件夹，即刻播放").font(.system(size: 13)).foregroundStyle(.secondary)
+            }
             HStack(spacing: 12) {
                 Button { player.openPanel() } label: { Label("打开媒体", systemImage: "folder").padding(.horizontal, 14).padding(.vertical, 5) }.buttonStyle(.borderedProminent)
                 Button { player.openURLPanel() } label: { Label("网络地址", systemImage: "link").padding(.vertical, 5) }.buttonStyle(.bordered)
@@ -231,7 +251,8 @@ struct PlayerView: View {
                                    dragSession: queueState.dragSession,
                                    play: { player.select($0) }, remove: { player.removePlaylistItems($0) },
                                    move: { player.movePlaylistItems($0, to: $1) },
-                                   failed: { player.error = $0 })
+                                   failed: { player.error = $0 },
+                                   appendMedia: { player.open($0, append: true) != nil })
                 }
             }
             Divider().opacity(0.4)
@@ -248,6 +269,15 @@ struct PlayerView: View {
             }.padding(12)
         }.background(Color.primary.opacity(0.035))
         .overlay(alignment: .leading) { Rectangle().fill(Color.primary.opacity(0.06)).frame(width: 1) }
+        .onDrop(of: [.fileURL, .url], isTargeted: $queueState.playlistDropTargeted) { providers in
+            DropLoader.load(providers) { player.open($0, append: true) }
+            return !providers.isEmpty
+        }
+        .overlay {
+            if queueState.playlistDropTargeted {
+                Rectangle().strokeBorder(accent, lineWidth: 2).allowsHitTesting(false)
+            }
+        }
     }
     private var visibleQueueRows: [QueueRow] {
         player.playlist.items.enumerated().compactMap { index, item in
@@ -451,6 +481,7 @@ private struct QueueTableView: NSViewRepresentable {
     let remove: (Set<UUID>) -> Void
     let move: (Set<UUID>, PlaylistMoveTarget) -> Bool
     let failed: (String) -> Void
+    var appendMedia: (([URL]) -> Bool)? = nil
 
     func makeCoordinator() -> Coordinator { Coordinator(self) }
 
@@ -481,7 +512,7 @@ private struct QueueTableView: NSViewRepresentable {
             table.dragTraceContext = { [weak coordinator] in coordinator?.dragTraceContext() ?? [:] }
             QueueDragTrace.record("table-created", coordinator.dragTraceContext())
         }
-        table.registerForDraggedTypes([Coordinator.pasteboardType])
+        table.registerForDraggedTypes([Coordinator.pasteboardType, .fileURL, .URL])
         table.setDraggingSourceOperationMask(.move, forLocal: true)
         table.setDraggingSourceOperationMask([], forLocal: false)
         let menu = NSMenu()
@@ -621,9 +652,30 @@ private struct QueueTableView: NSViewRepresentable {
                 throw error
             }
         }
+        private func externalDropURLs(_ info: NSDraggingInfo) -> [URL]? {
+            // Internal rows always remain the UUID/session move route, even if
+            // a foreign source supplies extra URL types beside that payload.
+            guard parent.appendMedia != nil,
+                  (info.draggingSource as? NSTableView) !== table,
+                  let types = info.draggingPasteboard.types,
+                  !types.contains(Self.pasteboardType),
+                  types.contains(.fileURL) || types.contains(.URL),
+                  let count = info.draggingPasteboard.pasteboardItems?.count,
+                  count > 0, count <= 128,
+                  let objects = info.draggingPasteboard.readObjects(forClasses: [NSURL.self], options: nil),
+                  !objects.isEmpty, objects.count <= 128 else { return nil }
+            let urls = objects.compactMap { ($0 as? NSURL).map { $0 as URL } }
+            return urls.count == objects.count ? urls : nil
+        }
         func tableView(_ tableView: NSTableView, validateDrop info: NSDraggingInfo, proposedRow row: Int,
                        proposedDropOperation dropOperation: NSTableView.DropOperation) -> NSDragOperation {
             traceDrag("validate-enter", dragInfo(info).merging(["proposedRow": row, "dropOperation": dropOperation.rawValue]) { _, new in new })
+            if externalDropURLs(info) != nil {
+                // External files append to the full queue, not a filtered row's
+                // insertion point. AppKit's whole-table marker reflects that.
+                tableView.setDropRow(-1, dropOperation: .on)
+                return .copy
+            }
             guard !parent.rows.isEmpty, (0...parent.rows.count).contains(row), (try? dropIDs(info)) != nil else {
                 traceDrag("validate-result", ["accepted": false]); return []
             }
@@ -634,6 +686,9 @@ private struct QueueTableView: NSViewRepresentable {
         func tableView(_ tableView: NSTableView, acceptDrop info: NSDraggingInfo, row: Int,
                        dropOperation: NSTableView.DropOperation) -> Bool {
             traceDrag("accept-enter", dragInfo(info).merging(["row": row, "dropOperation": dropOperation.rawValue]) { _, new in new })
+            if let urls = externalDropURLs(info) {
+                return parent.appendMedia?(urls) == true
+            }
             do {
                 let ids = try dropIDs(info)
                 guard let target = PlaylistMoveTarget.visibleInsertion(ids: parent.rows.map { $0.item.id }, row: row) else {

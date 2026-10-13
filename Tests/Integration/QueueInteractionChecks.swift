@@ -36,8 +36,9 @@ import PlayerCore
 @MainActor private final class QueueTestDraggingInfo: NSObject, @preconcurrency NSDraggingInfo {
     let draggingPasteboard: NSPasteboard
     let draggingSource: Any?
+    let operationMask: NSDragOperation
     var draggingDestinationWindow: NSWindow? { nil }
-    var draggingSourceOperationMask: NSDragOperation { .move }
+    var draggingSourceOperationMask: NSDragOperation { operationMask }
     var draggingLocation: NSPoint { .zero }
     var draggedImageLocation: NSPoint { .zero }
     var draggedImage: NSImage? { nil }
@@ -46,7 +47,9 @@ import PlayerCore
     var animatesToDestination = false
     var numberOfValidItemsForDrop = 1
     var springLoadingHighlight: NSSpringLoadingHighlight { .none }
-    init(pasteboard: NSPasteboard, source: Any?) { draggingPasteboard = pasteboard; draggingSource = source }
+    init(pasteboard: NSPasteboard, source: Any?, operationMask: NSDragOperation = .move) {
+        draggingPasteboard = pasteboard; draggingSource = source; self.operationMask = operationMask
+    }
     func slideDraggedImage(to screenPoint: NSPoint) {}
     override func namesOfPromisedFilesDropped(atDestination dropDestination: URL) -> [String]? { nil }
     func resetSpringLoading() {}
@@ -192,7 +195,61 @@ import PlayerCore
         let cell = coordinator.tableView(table, viewFor: table.tableColumns[0], row: 1)!
         let labels = cell.subviews.compactMap { ($0 as? NSTextField)?.stringValue }
         precondition(labels.contains(filteredAll[4].title) && labels.contains("05"))
-        print("PASS native filtered select-all, batch/single menus and original queue row identity")
+        let externalPasteboard = NSPasteboard.withUniqueName()
+        defer { externalPasteboard.releaseGlobally() }
+        let externalURLs = [URL(fileURLWithPath: "/影片/追加 中文 C.mp4"),
+                            URL(fileURLWithPath: "/影片/追加 中文 D.mkv")]
+        precondition(externalPasteboard.writeObjects(externalURLs.map { $0 as NSURL }))
+        var appended: [[URL]] = []
+        parent.appendMedia = { appended.append($0); return true }
+        parent.updateTable(coordinator)
+        let external = QueueTestDraggingInfo(pasteboard: externalPasteboard, source: nil, operationMask: .copy)
+        let originalOrder = queue.items.map(\.id)
+        let originalSelection = selection.ids
+        precondition(coordinator.tableView(table, validateDrop: external, proposedRow: 0, proposedDropOperation: .above) == .copy)
+        precondition(appended.isEmpty, "Drag validation must not append or mutate the queue")
+        precondition(coordinator.tableView(table, acceptDrop: external, row: -1, dropOperation: .on))
+        precondition(appended == [externalURLs], "External files must reach the append callback once in pasteboard order")
+        precondition(queue.items.map(\.id) == originalOrder && selection.ids == originalSelection,
+                     "External file drops must not invoke internal row movement or replace the selection")
+
+        // AppKit file drops must also work without any visible row. A filtered
+        // or empty sidebar still appends to the full queue through one callback.
+        parent = QueueTableView(rows: [], allItems: queue.items, currentID: filteredAll[3].id,
+                                selection: binding, dragSession: session,
+                                play: { played = $0 }, remove: { removed = $0 },
+                                move: { queue.move(ids: $0, to: $1) }, failed: { error = $0 },
+                                appendMedia: { appended.append($0); return true })
+        parent.updateTable(coordinator)
+        precondition(coordinator.tableView(table, validateDrop: external, proposedRow: 0, proposedDropOperation: .on) == .copy)
+        precondition(coordinator.tableView(table, acceptDrop: external, row: -1, dropOperation: .on))
+        precondition(appended == [externalURLs, externalURLs] && queue.items.map(\.id) == originalOrder)
+        parent.appendMedia = { _ in false }; parent.updateTable(coordinator)
+        precondition(!coordinator.tableView(table, acceptDrop: external, row: -1, dropOperation: .on),
+                     "A rejected append request must not be reported as accepted")
+        parent.appendMedia = nil; parent.updateTable(coordinator)
+        precondition(coordinator.tableView(table, validateDrop: external, proposedRow: 0, proposedDropOperation: .on).isEmpty)
+
+        // A URL cannot disguise a foreign/malformed internal reorder payload.
+        parent.appendMedia = { appended.append($0); return true }; parent.updateTable(coordinator)
+        let mixedItem = NSPasteboardItem()
+        precondition(mixedItem.setString(externalURLs[0].absoluteString, forType: .fileURL))
+        precondition(mixedItem.setData(Data("bad".utf8), forType: QueueTableView.Coordinator.pasteboardType))
+        externalPasteboard.clearContents()
+        precondition(externalPasteboard.writeObjects([mixedItem]))
+        precondition(coordinator.tableView(table, validateDrop: external, proposedRow: 0, proposedDropOperation: .on).isEmpty)
+        precondition(!coordinator.tableView(table, acceptDrop: external, row: -1, dropOperation: .on))
+        precondition(appended.count == 2 && queue.items.map(\.id) == originalOrder)
+        externalPasteboard.clearContents()
+        precondition(externalPasteboard.setString("ordinary text", forType: .string))
+        precondition(coordinator.tableView(table, validateDrop: external, proposedRow: 0, proposedDropOperation: .on).isEmpty)
+        externalPasteboard.clearContents()
+        precondition(externalPasteboard.writeObjects((0..<129).map {
+            NSURL(fileURLWithPath: "/影片/过量追加 \($0).mp4")
+        }))
+        precondition(coordinator.tableView(table, validateDrop: external, proposedRow: 0, proposedDropOperation: .on).isEmpty)
+        precondition(appended.count == 2 && queue.items.map(\.id) == originalOrder)
+        print("PASS native filtered menus/row identity plus external ordered append, empty table and internal-payload isolation")
         print("10 queue model and native callback groups passed")
     }
 }

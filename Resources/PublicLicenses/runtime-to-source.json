@@ -1,0 +1,463 @@
+{
+  "schema": 1,
+  "runtimeLibraryCount": 44,
+  "libraries": [
+    {
+      "name": "libSvtAv1Enc.4.dylib",
+      "binaryBytes": 4333216,
+      "binarySHA256": "b04799102fa2002243b945ec86930561e831591e29d29b5bee399a42b13c7ca6",
+      "project": "SVT_AV1",
+      "sourceVersionOrCommit": "4.2.0",
+      "sourceArchive": "archives/svt_av1-4.2.0.tar.gz",
+      "sourceArchiveSHA256": "d9cb8d5fccbed565d038ae304cb00c5610f1f62388868102ca22132e7844921b",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libarchive.13.dylib",
+      "binaryBytes": 807584,
+      "binarySHA256": "9a1d3750376a8c9dd2990eb925f0f198dd938a2c7ba440d62bda72251ae53c6f",
+      "project": "LIBARCHIVE",
+      "sourceVersionOrCommit": "3.8.8",
+      "sourceArchive": "archives/libarchive-3.8.8.tar.xz",
+      "sourceArchiveSHA256": "3873a88801da067d0528a989af06877710529d50ee8fe6f3970cbb4302efb918",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libass.9.dylib",
+      "binaryBytes": 247840,
+      "binarySHA256": "cf9360d32f674a2954b499d2a3ffa81cea01515820eeb07a3c2cc0f6f821a197",
+      "project": "LIBASS",
+      "sourceVersionOrCommit": "0.17.5",
+      "sourceArchive": "archives/libass-0.17.5.tar.xz",
+      "sourceArchiveSHA256": "2dca25c0e0c837ddf00b52011b3f82cac1e4ddd3ad018227806b0c2288864acc",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libavcodec.63.dylib",
+      "binaryBytes": 13155488,
+      "binarySHA256": "dada1df279a92b379109567292bb9b29dcb529acd0356a2f40cc3f9ebc6b6034",
+      "project": "FFMPEG",
+      "sourceVersionOrCommit": "9.0.1",
+      "sourceArchive": "archives/ffmpeg-9.0.1.tar.xz",
+      "sourceArchiveSHA256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libavdevice.63.dylib",
+      "binaryBytes": 98336,
+      "binarySHA256": "af6edc7c53328b470b06f09cfcb95112cdefa50e969f84f49366470b347f9237",
+      "project": "FFMPEG",
+      "sourceVersionOrCommit": "9.0.1",
+      "sourceArchive": "archives/ffmpeg-9.0.1.tar.xz",
+      "sourceArchiveSHA256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libavfilter.12.dylib",
+      "binaryBytes": 4288640,
+      "binarySHA256": "f762b87dcab8989ca34fdeefb18ebd50467456c37e98e0225648cd1b7d0baa79",
+      "project": "FFMPEG",
+      "sourceVersionOrCommit": "9.0.1",
+      "sourceArchive": "archives/ffmpeg-9.0.1.tar.xz",
+      "sourceArchiveSHA256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libavformat.63.dylib",
+      "binaryBytes": 2625936,
+      "binarySHA256": "8fc0375b158abf39260550f4a1a1b6f76870fbe432afcdb13d52d9e19526e1ca",
+      "project": "FFMPEG",
+      "sourceVersionOrCommit": "9.0.1",
+      "sourceArchive": "archives/ffmpeg-9.0.1.tar.xz",
+      "sourceArchiveSHA256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libavutil.61.dylib",
+      "binaryBytes": 740624,
+      "binarySHA256": "fbc487e70f0660039b7689e14d29dc0472ac9779d99dea5e15e6d733356bbd21",
+      "project": "FFMPEG",
+      "sourceVersionOrCommit": "9.0.1",
+      "sourceArchive": "archives/ffmpeg-9.0.1.tar.xz",
+      "sourceArchiveSHA256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libbluray.3.dylib",
+      "binaryBytes": 391616,
+      "binarySHA256": "2e8e7283345edb98369deb48e3f229bf0bdbc04ec742bac9934fcbac1b791aed",
+      "project": "LIBBLURAY",
+      "sourceVersionOrCommit": "1.4.1",
+      "sourceArchive": "archives/libbluray-1.4.1.tar.xz",
+      "sourceArchiveSHA256": "76b5dc40097f28dca4ebb009c98ed51321b2927453f75cc72cf74acd09b9f449",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libbrotlicommon.1.dylib",
+      "binaryBytes": 182304,
+      "binarySHA256": "0eb46b4a2a2da24829aec85ae83f4724a16f09654cc47def61c7b9f10a0bdcea",
+      "project": "BROTLI",
+      "sourceVersionOrCommit": "1.0.9",
+      "sourceArchive": "archives/brotli-1.0.9.tar.gz",
+      "sourceArchiveSHA256": "f9e8d81d0405ba66d181529af42a3354f838c939095ff99930da6aa9cdf6fe46",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libbrotlidec.1.dylib",
+      "binaryBytes": 85936,
+      "binarySHA256": "3fcc91f2aba21a9acf62795452ad8109a744fd9c3cbab5f593ab5fb6a1e7d39d",
+      "project": "BROTLI",
+      "sourceVersionOrCommit": "1.0.9",
+      "sourceArchive": "archives/brotli-1.0.9.tar.gz",
+      "sourceArchiveSHA256": "f9e8d81d0405ba66d181529af42a3354f838c939095ff99930da6aa9cdf6fe46",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libbrotlienc.1.dylib",
+      "binaryBytes": 766160,
+      "binarySHA256": "9ea2b28b602fda5ffe0d74b87e08c3b8db29b1267e22369324b45028b4cdf86e",
+      "project": "BROTLI",
+      "sourceVersionOrCommit": "1.0.9",
+      "sourceArchive": "archives/brotli-1.0.9.tar.gz",
+      "sourceArchiveSHA256": "f9e8d81d0405ba66d181529af42a3354f838c939095ff99930da6aa9cdf6fe46",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libbs2b.0.dylib",
+      "binaryBytes": 53472,
+      "binarySHA256": "4009ae59c8c66c8ae023e5ad9ab3b640d48c11d6ef802008d7bef998738022ba",
+      "project": "LIBBS2B",
+      "sourceVersionOrCommit": "3.1.0",
+      "sourceArchive": "archives/libbs2b-3.1.0.tar.gz",
+      "sourceArchiveSHA256": "6aaafd81aae3898ee40148dd1349aab348db9bfae9767d0e66e0b07ddd4b2528",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libdav1d.7.dylib",
+      "binaryBytes": 841408,
+      "binarySHA256": "24b42326f1fd0fbf3a52113ae0811b8267438ac9044262bddcb0dd3c539b7642",
+      "project": "DAV1D",
+      "sourceVersionOrCommit": "1.5.3",
+      "sourceArchive": "archives/dav1d-1.5.3.tar.bz2",
+      "sourceArchiveSHA256": "e099f53253f6c247580c554d53a13f1040638f2066edc3c740e4c2f15174ce22",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libfontconfig.1.dylib",
+      "binaryBytes": 385936,
+      "binarySHA256": "c89f7c29ba616796479e90687504268ed431afb0e727df3cfaabec117be67dda",
+      "project": "FONTCONFIG",
+      "sourceVersionOrCommit": "2.18.1",
+      "sourceArchive": "archives/fontconfig-2.18.1.tar.gz",
+      "sourceArchiveSHA256": "e9309564717b6301230112b173f36c288489479d381d2f0add1210ca5b16ba7e",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libfreetype.6.dylib",
+      "binaryBytes": 761584,
+      "binarySHA256": "3ed16b5a41dde0e8d3ac2c1b6dab3a8fc95956cb96c5bc75fcde8de95a0616bc",
+      "project": "FREETYPE",
+      "sourceVersionOrCommit": "2.14.3",
+      "sourceArchive": "archives/freetype-2.14.3.tar.xz",
+      "sourceArchiveSHA256": "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libfribidi.0.dylib",
+      "binaryBytes": 169248,
+      "binarySHA256": "4327a8841ce0bb7b4573c3c93bbefd9a2c505921cae3264874266d1ea3361dfb",
+      "project": "FRIBIDI",
+      "sourceVersionOrCommit": "1.0.16",
+      "sourceArchive": "archives/fribidi-1.0.16.tar.xz",
+      "sourceArchiveSHA256": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libharfbuzz.0.dylib",
+      "binaryBytes": 1427696,
+      "binarySHA256": "7fdd7238a2de0823b5de93156b767a359d96ff4d8d4b0a0495222cacb74affc1",
+      "project": "HARFBUZZ",
+      "sourceVersionOrCommit": "14.2.1",
+      "sourceArchive": "archives/harfbuzz-14.2.1.tar.xz",
+      "sourceArchiveSHA256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libjpeg.62.dylib",
+      "binaryBytes": 648176,
+      "binarySHA256": "0ef338fbabd85278d467e1fcd8309cc7c215a67617c18e0a49809571c300c25c",
+      "project": "JPEG_TURBO",
+      "sourceVersionOrCommit": "3.1.4.1",
+      "sourceArchive": "archives/jpeg_turbo-3.1.4.1.tar.gz",
+      "sourceArchiveSHA256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libjxl.0.11.dylib",
+      "binaryBytes": 2423312,
+      "binarySHA256": "dfdb6271cdc739b4d9b7e3c98fb864fde99835ce3f968095d70de95b9e2ec9d3",
+      "project": "LIBJXL",
+      "sourceVersionOrCommit": "0.11.2",
+      "sourceArchive": "archives/libjxl-v0.11.2-332feb17.tar.gz",
+      "sourceArchiveSHA256": "530343fa2305ebe730ed3a6358ac0d086f3859e83ed4842a939015f9d4676db2",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libjxl_cms.0.11.dylib",
+      "binaryBytes": 435184,
+      "binarySHA256": "e33de0cba5b60852e30fe87e0b45bd6653fa3efb38d4ca9dc965a0ad5283d327",
+      "project": "LIBJXL",
+      "sourceVersionOrCommit": "0.11.2",
+      "sourceArchive": "archives/libjxl-v0.11.2-332feb17.tar.gz",
+      "sourceArchiveSHA256": "530343fa2305ebe730ed3a6358ac0d086f3859e83ed4842a939015f9d4676db2",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libjxl_threads.0.11.dylib",
+      "binaryBytes": 53824,
+      "binarySHA256": "3c403bfc410791473f01d9faf49c8a397de5fe7abd3b50a14234c6230f741804",
+      "project": "LIBJXL",
+      "sourceVersionOrCommit": "0.11.2",
+      "sourceArchive": "archives/libjxl-v0.11.2-332feb17.tar.gz",
+      "sourceArchiveSHA256": "530343fa2305ebe730ed3a6358ac0d086f3859e83ed4842a939015f9d4676db2",
+      "sourceAcquired": true
+    },
+    {
+      "name": "liblcms2.2.dylib",
+      "binaryBytes": 402704,
+      "binarySHA256": "c8aafe2a7862d13cc4ca2537ee9e2a75670c30d784b77ef6f2163f757976afb3",
+      "project": "LITTLE_CMS2",
+      "sourceVersionOrCommit": "2.19",
+      "sourceArchive": "archives/little_cms2-2.19.tar.gz",
+      "sourceArchiveSHA256": "49e7e134e4299733dd0eda434fa468997a28ab3d33fa397c642b03644f552216",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libluajit-5.1.2.dylib",
+      "binaryBytes": 704384,
+      "binarySHA256": "efbdefa849b61098aba26b8534fe76985c52133f9fe4e846d848c97b648644ec",
+      "project": "LUAJIT",
+      "sourceVersionOrCommit": "8e6520a7aecd0517e792b359afbbfd7274791f5f",
+      "sourceArchive": "archives/luajit-8e6520a7aecd0517e792b359afbbfd7274791f5f.tar.gz",
+      "sourceArchiveSHA256": "9c4c370559352e0622231d5a1f28e95ff56e2dce6308238e6588b0943aac5e63",
+      "sourceAcquired": true
+    },
+    {
+      "name": "liblz4.1.dylib",
+      "binaryBytes": 193760,
+      "binarySHA256": "479537d06f34962fbb1be38ae96a15ab1ecd80ac2411878566187ed7abce82be",
+      "project": "LZ4",
+      "sourceVersionOrCommit": "1.10.0",
+      "sourceArchive": "archives/lz4-1.10.0.tar.gz",
+      "sourceArchiveSHA256": "537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libmpv.2.dylib",
+      "binaryBytes": 4199392,
+      "binarySHA256": "e061790f5ca5fbcbd33eccf93240fd70184cd8e04c1d680aeb45f02c6abe7daf",
+      "project": "MPV_LOCAL",
+      "sourceVersionOrCommit": "v0.41.0-dev-g97179bce7-dirty; 18 local source-file changes",
+      "sourceArchive": "archives/mpv-97179bce-local-patched-full-source.tar.gz",
+      "sourceArchiveSHA256": "27bf6378fc50cc636e11aaf6f18e4eed128be3fadb66b9af1b5490d8c13c35ae",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libmujs.dylib",
+      "binaryBytes": 402976,
+      "binarySHA256": "6614b9f70d17df4cbb07f7909caca99dc23d078828c00627101b41e113d61f09",
+      "project": "MUJS",
+      "sourceVersionOrCommit": "1.3.9",
+      "sourceArchive": "archives/mujs-1.3.9.tar.gz",
+      "sourceArchiveSHA256": "956d5a20dd4efe5aa58673558787b9e2539255f9bf62585e90e1921fa040d89d",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libogg.0.dylib",
+      "binaryBytes": 70160,
+      "binarySHA256": "ef8487813da0bfcea63c90c85ecb021a073310f2194426c857d3b4aa533ed07d",
+      "project": "LIBOGG",
+      "sourceVersionOrCommit": "1.3.6",
+      "sourceArchive": "archives/libogg-1.3.6.tar.gz",
+      "sourceArchiveSHA256": "83e6704730683d004d20e21b8f7f55dcb3383cdf84c0daedf30bde175f774638",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libplacebo.365.dylib",
+      "binaryBytes": 7159360,
+      "binarySHA256": "448b340b7d9436a2abc8079cdd41d01d69ff30ef6d28c3740cd885abe13769ca",
+      "project": "LIBPLACEBO_LOCAL",
+      "sourceVersionOrCommit": "a96296875a067887fc75d7b74a0a4292422c204d; API365; one local source-file change",
+      "sourceArchive": "archives/libplacebo-a9629687-local-full-source-with-submodules.tar.gz",
+      "sourceArchiveSHA256": "0885b3498163e694b27d4abf7b9708d3ecfa8f54b3008e6f5a05f9ef44ff15d4",
+      "sourceAcquired": true
+    },
+    {
+      "name": "librubberband.3.dylib",
+      "binaryBytes": 441584,
+      "binarySHA256": "3e94847cdb67c4944425c8f4c106a06f6347058e33458168e14e9ede6bf28101",
+      "project": "RUBBERBAND",
+      "sourceVersionOrCommit": "4.0.0",
+      "sourceArchive": "archives/rubberband-4.0.0.tar.bz2",
+      "sourceArchiveSHA256": "af050313ee63bc18b35b2e064e5dce05b276aaf6d1aa2b8a82ced1fe2f8028e9",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libsharpyuv.0.dylib",
+      "binaryBytes": 67872,
+      "binarySHA256": "f259287a21c949ca3e4e5a05c62fd5a4643b1f45fdf84dd10999ce162decfbc4",
+      "project": "LIBWEBP",
+      "sourceVersionOrCommit": "1.6.0",
+      "sourceArchive": "archives/libwebp-1.6.0.tar.gz",
+      "sourceArchiveSHA256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libsoxr.0.dylib",
+      "binaryBytes": 205696,
+      "binarySHA256": "66148102b606c392deea89c1e397a3c325cf2c5bacf5d7cdf24b74190cefbf32",
+      "project": "LIBSOXR",
+      "sourceVersionOrCommit": "0.1.3",
+      "sourceArchive": "archives/libsoxr-0.1.3.tar.xz",
+      "sourceArchiveSHA256": "b111c15fdc8c029989330ff559184198c161100a59312f5dc19ddeb9b5a15889",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libspeex.1.dylib",
+      "binaryBytes": 173392,
+      "binarySHA256": "bc1e53aba34f428c7681fb16f0ef4a1007eb2ff3bce24ed89408115b4410e792",
+      "project": "SPEEX",
+      "sourceVersionOrCommit": "1.2.1",
+      "sourceArchive": "archives/speex-1.2.1.tar.gz",
+      "sourceArchiveSHA256": "4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libswresample.7.dylib",
+      "binaryBytes": 136640,
+      "binarySHA256": "fa1eb6484066062e0c1a639c76a5af5de46908650adce0a50bcddc4ec8088086",
+      "project": "FFMPEG",
+      "sourceVersionOrCommit": "9.0.1",
+      "sourceArchive": "archives/ffmpeg-9.0.1.tar.xz",
+      "sourceArchiveSHA256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libswscale.10.dylib",
+      "binaryBytes": 1211376,
+      "binarySHA256": "a09e923888f3a77186078406f420c1e326dbdacc58dd9bb0dc12c827dae4f3c7",
+      "project": "FFMPEG",
+      "sourceVersionOrCommit": "9.0.1",
+      "sourceArchive": "archives/ffmpeg-9.0.1.tar.xz",
+      "sourceArchiveSHA256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libuchardet.0.dylib",
+      "binaryBytes": 221776,
+      "binarySHA256": "6848c129ffa26ab43e07dc2d44a98889506679583815efa1adcfa26b5d340446",
+      "project": "UCHARDET",
+      "sourceVersionOrCommit": "0.0.8",
+      "sourceArchive": "archives/uchardet-0.0.8.tar.xz",
+      "sourceArchiveSHA256": "e97a60cfc00a1c147a674b097bb1422abd9fa78a2d9ce3f3fdcc2e78a34ac5f0",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libudfread.3.dylib",
+      "binaryBytes": 52976,
+      "binarySHA256": "66152e6943ef04a0d0cb125550c4f944b1bb6d4ef4654497a60cbda30bccdd5a",
+      "project": "LIBUDFREAD",
+      "sourceVersionOrCommit": "1.2.0",
+      "sourceArchive": "archives/libudfread-1.2.0.tar.xz",
+      "sourceArchiveSHA256": "bb477cbd4cfbfc7787d9d05b71ee5e70430f5cfebf1297497f7e83547958050f",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libunibreak.7.dylib",
+      "binaryBytes": 191376,
+      "binarySHA256": "096149b6d53ae967322383511e6b78d4fb183e6e2a9aaba61cb80b9ebe9918ba",
+      "project": "LIBUNIBREAK",
+      "sourceVersionOrCommit": "7.0",
+      "sourceArchive": "archives/libunibreak-7.0.tar.gz",
+      "sourceArchiveSHA256": "8c9a6e121736cd0d5c890ae3ae96f3f4010a19aa040f1dbded833a62a87717d3",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libvorbis.0.dylib",
+      "binaryBytes": 256160,
+      "binarySHA256": "ba48848e94af7c27ba712ee7e428a426723ce2153ee52bb8fb9fdf8f3af81aa4",
+      "project": "LIBVORBIS",
+      "sourceVersionOrCommit": "1.3.7",
+      "sourceArchive": "archives/libvorbis-1.3.7.tar.xz",
+      "sourceArchiveSHA256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libvorbisenc.2.dylib",
+      "binaryBytes": 749584,
+      "binarySHA256": "c8f9c4a5d7077f1350ca0cad08be06a5edd2cd8e35b074bf2b279d9fba220232",
+      "project": "LIBVORBIS",
+      "sourceVersionOrCommit": "1.3.7",
+      "sourceArchive": "archives/libvorbis-1.3.7.tar.xz",
+      "sourceArchiveSHA256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libwebp.7.dylib",
+      "binaryBytes": 494688,
+      "binarySHA256": "9ed363c7f5fdb673c9f9aa737170bde3d5db61fc41c61e5e475f0d9d38d9508a",
+      "project": "LIBWEBP",
+      "sourceVersionOrCommit": "1.6.0",
+      "sourceArchive": "archives/libwebp-1.6.0.tar.gz",
+      "sourceArchiveSHA256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libwebpmux.3.dylib",
+      "binaryBytes": 87808,
+      "binarySHA256": "57ee24d639509acf0a4875ad9bc4aaebc2e97cd231be74423479186acedcff07",
+      "project": "LIBWEBP",
+      "sourceVersionOrCommit": "1.6.0",
+      "sourceArchive": "archives/libwebp-1.6.0.tar.gz",
+      "sourceArchiveSHA256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libzimg.2.dylib",
+      "binaryBytes": 373664,
+      "binarySHA256": "181e4b354c4077906af1085a787f3be0a27bf580a15bad01c612e673d79dfc7b",
+      "project": "ZIMG",
+      "sourceVersionOrCommit": "3.0.6",
+      "sourceArchive": "archives/zimg-3.0.6.tar.gz",
+      "sourceArchiveSHA256": "be89390f13a5c9b2388ce0f44a5e89364a20c1c57ce46d382b1fcc3967057577",
+      "sourceAcquired": true
+    },
+    {
+      "name": "libzstd.1.dylib",
+      "binaryBytes": 810064,
+      "binarySHA256": "b279fc6b7ec994752653d9173249638cc59f38ad5e72b5c3af073036bd1ad140",
+      "project": "ZSTD",
+      "sourceVersionOrCommit": "1.5.7",
+      "sourceArchive": "archives/zstd-1.5.7.tar.gz",
+      "sourceArchiveSHA256": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3",
+      "sourceAcquired": true
+    }
+  ],
+  "ffmpegTools": [
+    {
+      "path": "ffmpeg",
+      "sha256": "453b3492e4f9f16695ad9b4c768c8722fed1dd88d6b523e9d82c6cc636661b7d",
+      "bytes": 21957840,
+      "executable": true
+    },
+    {
+      "path": "ffprobe",
+      "sha256": "10333244662b64bdd93226a92b3f395a973a986e6c6283e5b3acca77f59c1c14",
+      "bytes": 21767328,
+      "executable": true
+    }
+  ],
+  "borrowedLibraryVersions": "Official IINA donor provenance plus fixed deps recipe/source pins; ABI dylib versions are not substituted for source project releases",
+  "localForks": "Exact patched source snapshots and Git-base unified patches included",
+  "systemLibraries": "Apple system framework/Swift/libSystem dependencies are supplied by macOS and not included runtime payloads"
+}

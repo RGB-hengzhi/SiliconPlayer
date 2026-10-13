@@ -20,12 +20,16 @@ final class PlayerModel: ObservableObject {
     let handle: OpaquePointer?
     @Published var playlist = Playlist() {
         didSet {
+            if playlist.items.isEmpty && restoredQueueOnStartup { restoredQueueOnStartup = false }
             if playlist.items != oldValue.items || playlist.currentIndex != oldValue.currentIndex {
                 ordinaryOpenQueueRevision &+= 1
                 if !nativeAudioPublishing { nativeAudioQueue.logicalChanged() }
             }
         }
     }
+    // Welcome-only state: a restored list does not imply a media load or autoplay.
+    // Never persist this marker or reuse it after an explicit load/Stop.
+    @Published var restoredQueueOnStartup = false
     private var ordinaryOpenQueueRevision: UInt64 = 0
     lazy var ordinaryMediaOpen = OrdinaryMediaOpenController(
         snapshot: { [weak self] in self?.ordinaryMediaOpenContext() },
@@ -581,6 +585,7 @@ final class PlayerModel: ObservableObject {
         // native append can survive it. Old loaded receipts are settled first.
         guard finishTemporarySpeed(reason: "replacement-load") else { return false }
         guard nativeAudioQueue.retire(reason: .newRequest) else { return false }
+        if restoredQueueOnStartup { restoredQueueOnStartup = false }
         playbackProgram.invalidate(reason: "replacement-load")
         liveASR.invalidate(reason: .load)
         liveASRHostState.prepareLoad(item.url)
@@ -772,6 +777,7 @@ final class PlayerModel: ObservableObject {
     }
     func stopPlayback() {
         guard finishTemporarySpeed(reason: "stop") else { return }
+        if restoredQueueOnStartup { restoredQueueOnStartup = false }
         saveHistory()
         _ = nativeAudioQueue.retire(reason: .manualStop)
         cancelVideoConfigurationTransition()

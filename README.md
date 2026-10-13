@@ -1,82 +1,54 @@
 # SiliconPlayer
 
-**为 Apple M 系列 Mac 打造的原生播放器，先把日常播放做好。**
+**Apple Silicon 原生播放器，把日常播放做好。**
 
-`macOS 14+` · `Apple Silicon / arm64` · `0.6.0 日常版` · `应用约 113 MiB`
+`macOS 14+` · `Apple M 系列 / arm64` · `0.6.1 core build 14 r2` · `应用 113.70 MiB`
 
-SiliconPlayer 希望把 PotPlayer 中常用的播放、字幕、列表与工具能力带到 Mac，界面采用 SwiftUI / AppKit，播放基础复用 mpv、FFmpeg 和 libass。当前版本注重好用、轻量和合理的资源占用，常见操作集中在一个窗口中。
+[下载应用](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.1-core/SiliconPlayer-0.6.1-core-arm64.zip) · [应用源码](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.1-core/SiliconPlayer-0.6.1-core-application-source.zip) · [SHA256SUMS](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.1-core/SHA256SUMS.txt)
 
-![SiliconPlayer 播放界面](Docs/images/player.jpg)
+![0.6.1 实际播放窗口](Docs/images/continued-paused.jpg)
 
-*实际运行界面：播放画面、进度控制与播放列表。*
+*本构建真实界面：继续 HEVC 后暂停，保留当前列表与播放位置。*
 
-[功能与使用](Docs/OVERVIEW.md) · [测试与资源实测](Docs/TESTING.md) · [开发说明](Docs/BUILDING.md) · [依赖与对应源码](Docs/DEPENDENCIES.md)
+## 0.6.1：恢复播放和追加更顺手
 
-## 下载与开始使用
-
-1. 从 [GitHub Releases](https://github.com/RGB-hengzhi/SiliconPlayer/releases) 下载 `SiliconPlayer-0.6.0-core-arm64-public.zip`，解压后将 `SiliconPlayer.app` 拖到“应用程序”。
-2. 双击打开，按 **⌘O** 选择视频或音频，也可以拖入文件、多个文件或文件夹。成品自带播放与导出依赖，无需安装 Homebrew、Python、Xcode 或语音模型。
-3. 当前采用 **ad-hoc 签名，尚未完成 Apple 公证**。若首次打开被拦截，核对下载来源与 Release 的 SHA256 清单后，在“系统设置 → 隐私与安全性”为这个应用选择“仍要打开”，再确认“打开”。采用单个应用授权，不需要关闭 Gatekeeper。[Apple 官方说明](https://support.apple.com/zh-cn/102445)
-
-安装包、实际对应源码与依赖材料、校验清单在同一个 Release 提供。当前仅支持 Apple Silicon / arm64，最低目标 macOS 14；资源实测与验证边界见下文。
-
-开发者可在受控依赖准备完成后构建日常版：
-
-```bash
-SILICONPLAYER_BUILD_PROFILE=core bash scripts/build_app.sh
-```
-
-完整源码资产、必要补丁与实际构建路线见 Release 的对应源码说明和 [开发说明](Docs/BUILDING.md)。构建对应源码不等于承诺在任意机器上生成每个字节都相同的二进制；也不能省略实际依赖源码、补丁或打包脚本。
-
-## 日常功能
-
-| 场景 | 已提供的能力 |
+| 场景 | 使用方式 |
 | --- | --- |
-| 看视频、听音频 | 本地文件与直接网络地址；H.264、HEVC、MKV、MOV、MP4 和常见音频；VideoToolbox 硬件解码 |
-| 快速控制 | 精确跳转、逐帧、倍速、A–B 循环、单文件循环、音量与静音、全屏、系统画中画 |
-| 整理播放 | 列表筛选、多选、批量移除、右键排序、列表导入导出、历史续播、书签与收藏 |
-| 看字幕、选音轨 | 多音轨、外部音轨、ASS/SRT 主副字幕、独立样式与同步设置 |
-| 调整画面与声音 | 常用画面设置、用户滤镜、十段均衡器与输出设备选择 |
-| 保存与导出 | PNG/JPEG/WebP 截图、剪贴板、手动缩略图与拼图、MP4 片段、原码片段复制、完整 WAV 音频 |
+| 重开播放器 | 欢迎页显示“已恢复 N 项播放列表”和上次选中的媒体，点击“继续上次”再从历史位置播放。启动本身不自动加载或播放。 |
+| 拖入媒体 | 拖到播放画面替换列表，拖到侧栏追加；侧栏原生行、空列表和筛选无结果入口也已实现。内部行重排保留。 |
 
-![主副字幕显示](Docs/images/subtitles.png)
+![0.6.1 实际恢复欢迎页](Docs/images/restored-welcome.jpg)
 
-*实际字幕输出：英文副字幕位于上方，中文 ASS 主字幕位于下方。*
+*恢复两项列表并显示选中媒体；继续播放需要明确操作。*
 
-WAV 导出保留输入采样率与声道，输出 16 位 PCM，使用 FFmpeg 默认源音轨选择。它导出完整音频，片段起止时间不用于 WAV；不保证跟随播放器当前选择的第二音轨。
+真实窗口复测中，点击“继续上次”从约 8.167 秒开始播放；暂停在 23.133 秒后添加 FLAC，列表增至三项，当前媒体、位置与暂停保持。⌘O 打开另一媒体则替换为一项。原生追加回调已测，跨 App 物理鼠标拖动尚未认证，详见 [测试摘要](Docs/TESTING.md)。
 
-## 轻量与实测
+## 开始使用
 
-日常版不包含语音模型、Deno 或 yt-dlp。时间轴拖动只显示定位时间，不自动启动 FFmpeg 缩略图任务；需要时可从“工具”手动生成。画面滤镜默认关闭。
+下载约 **48.26 MiB** 的 ZIP，解压并把 `SiliconPlayer.app` 拖到“应用程序”。按 **⌘O** 打开视频或音频，也可拖入文件、多个文件或文件夹。成品自带播放和导出依赖，无需安装 Homebrew、Python、Xcode 或语音模型。
 
-![当前版本的 4K 播放资源实测](Docs/images/performance.svg)
+采用 **ad-hoc 签名，尚未完成 Apple 公证**。若首次打开被拦截，核对来源及校验清单后，在“系统设置 → 隐私与安全性”为该应用选择“仍要打开”，再确认“打开”；无需关闭 Gatekeeper。[Apple 官方说明](https://support.apple.com/zh-cn/102445)
 
-封存功能基线 **core build 13 r3** 通过 **140 个模块检查 + 30 个实际应用场景组**。公开安装包补充许可证、对应源码入口等发行说明并重新签名、打包；未新增功能，不将元数据更新计为又运行一轮 170 项测试。4K H.264 60fps 约一分钟实测平均 CPU **12.65%**，稳定物理足迹峰值 **359.10 MiB**，解码与渲染均零丢帧。普通界面还实测了三种来源的 WAV 导出、中文字幕截图、启动器窗口复用，以及设置面板打开时的正常退出。
+## 日常功能与轻量
 
-测试设备为 Apple M6 / 16 GB / macOS 27.0.1，使用窗口内 SDR 素材。CPU 100% 约等于一个核心；物理足迹与 RSS 是不同指标。以上数据描述本次测试条件，完整计数、哈希与验证边界见 [测试摘要](Docs/TESTING.md)。
+本地与直接网络媒体，多音轨和外部音轨，ASS/SRT 主副字幕，逐帧、倍速、A–B 循环，全屏与画中画，均衡器，历史、书签和收藏，PNG/JPEG/WebP 截图及片段/WAV 导出。少用的高级能力后续逐步完善，项目与 PotPlayer 官方无关联。
 
-## 常用快捷键
+日常版不包含 ASR 模型、Deno 或 yt-dlp；拖动时间轴不自动运行 FFmpeg 缩略图任务，画面滤镜默认关闭。
+
+![0.6.1 当前构建的 4K 实测](Docs/images/performance.svg)
+
+当前构建通过 **140 个模块检查 + 12 个实际应用场景，共 152 项自动检查**，13 个执行阶段自然退出。4K H.264 60fps 约一分钟实测 CPU 平均 **10.44%**、稳定物理足迹峰值 **363.02 MiB**，解码/渲染零丢帧。设备为 Apple M6 / 16 GB / macOS 27.0.1，窗口内 SDR 播放；CPU 100% 约等于一个核心，物理足迹与 RSS 为不同指标。旧版本成绩未计入本次。
+
+[功能说明](Docs/OVERVIEW.md) · [测试摘要](Docs/TESTING.md) · [开发说明](Docs/BUILDING.md) · [依赖与对应源码](Docs/DEPENDENCIES.md)
 
 | 快捷键 | 操作 | 快捷键 | 操作 |
 | --- | --- | --- | --- |
 | 空格 | 播放 / 暂停 | ← / → | 后退 / 前进 5 秒 |
-| F / M / V | 全屏 / 静音 / 停止 | [ / ] | 降低 / 提高倍速 |
-| . / , | 下一帧 / 上一帧 | A | 设置 / 清除 A–B 循环 |
-| ⌘O / ⇧⌘O | 打开 / 添加媒体 | ⌘U | 打开网络地址 |
-| ⇧⌘S | 加载字幕 | ⌘S | 截图 |
-| ⌘L / ⌘I | 播放列表 / 媒体信息 | ⌘, | 播放设置 |
+| ⌘O / ⇧⌘O | 打开 / 添加媒体 | F / M / V | 全屏 / 静音 / 停止 |
+| ⌘S / ⌘, | 截图 / 设置 | [ / ] | 降低 / 提高倍速 |
 
-## 后续方向
+## 开源基础与许可
 
-先继续打磨日常体验，再逐步完善语音字幕、网页视频解析、Metal/HDR、360°/3D、设备采集、远程协议、光盘菜单与投屏等能力。当前版本没有宣称这些少用能力已经验收，也尚未覆盖 PotPlayer 的全部功能；项目与 PotPlayer 官方无关联。
+界面使用 Swift / SwiftUI / AppKit 编写，播放基础复用 [mpv](https://github.com/mpv-player/mpv)、[FFmpeg](https://ffmpeg.org/) 和 [libass](https://github.com/libass/libass)，参考 [IINA](https://github.com/iina/iina) 的 Mac 原生交互。
 
-## 开源基础
-
-- [mpv](https://github.com/mpv-player/mpv)：播放引擎和媒体控制。
-- [FFmpeg](https://ffmpeg.org/)：媒体解码、探测与导出。
-- [libass](https://github.com/libass/libass)：ASS 字幕渲染。
-- [IINA](https://github.com/iina/iina)：原生 Mac 交互参考和最初播放依赖来源。
-
-原创部分 **Copyright © 2026 RGB-hengzhi (SiliconPlayer)**，采用 **GPL-3.0-or-later**，完整 GNU GPLv3 原文见 [LICENSE](LICENSE)。mpv API 头文件保留原 ISC 许可，第三方组件保留各自版权和许可，详见 [NOTICE](NOTICE.md) 与 [第三方说明](THIRD_PARTY.md)。
-
-按已有 GPL 条件提供应用及实际对应源码，不需要额外购买闭源替代商业授权。原创应用源码、实际依赖源码和补丁、构建与打包说明在同一 Release 免费提供；上游首页链接不能替代对应源码。构建依赖与复现边界见 [开发说明](Docs/BUILDING.md)。
+原创部分 **Copyright © 2026 RGB-hengzhi (SiliconPlayer)**，采用 **GPL-3.0-or-later**，第三方版权和许可保持不变，见 [LICENSE](LICENSE)、[NOTICE](NOTICE.md) 与 [第三方说明](THIRD_PARTY.md)。新的实际应用源码、构建与打包材料随本次 Release 提供；相同 44 个播放库和两个媒体工具复用 [0.6.0 已公开的依赖对应源码](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.0-core/SiliconPlayer-0.6.0-core-dependency-source.zip)。完整对应源码供给不宣称已经在任意干净机器上完成逐字节重建。

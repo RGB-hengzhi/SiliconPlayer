@@ -14,3 +14,7 @@
 [依赖对应源码包](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.0-core/SiliconPlayer-0.6.0-core-dependency-source.zip)记录实际 r3 的 mpv v0.41.0-dev-g97179bce7-dirty、libplacebo 7.365.0 等版本、本地补丁、全部 44 个运行库的二进制 SHA256 和来源。
 
 `Vendor/licenses/SCOPE.txt` 是初始 IINA bootstrap 的历史准备状态，随原始源码保留以记录构建输入；它不是当前公开发行包的许可状态。公开包在应用内及 ZIP 外层提供 GPLv3、实际依赖原版权通知与对应源码入口，项目原创部分采用 GPL-3.0-or-later。
+
+## 0.6.1 复用边界
+
+0.6.1 core build 14 r2 重新编译了实际应用源码，并独立完成本次 152 项自动检查。其 44 个播放库与两个媒体工具保留 0.6.0 公共包的完整字节，因此继续引用上方已有依赖源码资产（SHA256 `c866e7f402b08371b79a3a02e7206f3be0bbeb07ac8da3b6e1c863b5a21a7c7d`），无需重复上传同一依赖包。新的 [应用源码](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.1-core/SiliconPlayer-0.6.1-core-application-source.zip) 与 [校验清单](https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.1-core/SHA256SUMS.txt) 随本次 Release 提供。

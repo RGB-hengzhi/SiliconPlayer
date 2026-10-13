@@ -55,11 +55,16 @@ with tempfile.TemporaryDirectory(prefix='siliconplayer-lifecycle-') as profile:
     read = run('persistence-read', profile)
     expect(all(read[key] for key in ['queueRestoredWithoutAutoplay', 'preferencesRestored', 'libraryRestored', 'profilePlayable']), repr(read))
     expect(8 <= read['resumePosition'] < 11 and read['restoredEqualizerFilters'], repr(read))
-    print('PASS second-launch queue/current item/preferences/library restoration and real resumed playback', flush=True)
+    expect(all(read[key] for key in ['restoredWelcomeAvailable', 'restoredSessionIdle', 'restoredSelectedSecondItem',
+                                    'continueConsumedRestoreMarker', 'continuePreservedSelection',
+                                    'continuePlayingWithoutChangingAutoplay']), repr(read))
+    expect(abs(read['restoredHistoryTarget'] - 8) < .1, repr(read))
+    print('PASS second-launch restored welcome/selected item and explicit Continue resume with autoplay disabled', flush=True)
 with tempfile.TemporaryDirectory(prefix='siliconplayer-damaged-profile-') as profile:
     for name in ['preferences.json', 'queue.json', 'history.json', 'library.json']:
         (Path(profile) / name).write_bytes(b'{ intentionally corrupt JSON')
     read = run('corrupt-profile', profile)
     expect(all(read[key] for key in ['corruptSettingsDefaulted', 'corruptQueueEmpty', 'corruptLibraryReported', 'corruptHistoryReported', 'profilePlayable']), repr(read))
+    expect(read['corruptWelcomeNotRestored'], repr(read))
     print('PASS actual corrupted profile defaults, visible store errors and successful media recovery', flush=True)
 print('3 lifecycle integration groups passed', flush=True)

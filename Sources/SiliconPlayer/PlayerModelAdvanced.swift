@@ -23,6 +23,7 @@ extension PlayerModel {
     var recentMedia: [PlaybackHistoryEntry] { Array(history.recentEntries.prefix(200)) }
     private static var queueURL: URL { preferenceURL.deletingLastPathComponent().appendingPathComponent("queue.json") }
     func restoreQueue() {
+        restoredQueueOnStartup = false
         guard let data = try? Data(contentsOf: Self.queueURL) else { return }
         do {
             let queue = try JSONDecoder().decode(QueueDocument.self, from: data)
@@ -37,6 +38,7 @@ extension PlayerModel {
                let restored = playlist.items.first(where: { $0.url == queue.items[index].url }) {
                 _ = playlist.select(id: restored.id)
             }
+            restoredQueueOnStartup = !playlist.items.isEmpty && playlist.currentItem != nil
         } catch { toast("上次播放列表无法恢复") }
     }
     func persistQueue() {

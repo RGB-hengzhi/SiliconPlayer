@@ -169,6 +169,25 @@ for path in source.rglob("*"):
         # Copy data only. exFAT AppleDouble metadata must not become resources.
         shutil.copyfile(path, destination)
 PY
+python3 - "$PROJECT_ROOT/Resources/PublicLicenses" "$STAGING_APP/Contents/Resources/Licenses" <<'PY'
+from pathlib import Path
+import shutil
+import sys
+source, target = map(Path, sys.argv[1:])
+if source.is_symlink() or not source.is_dir():
+    raise SystemExit('Public license resources are required before packaging.')
+for path in source.rglob('*'):
+    relative = path.relative_to(source)
+    if any(part.startswith('._') for part in relative.parts):
+        continue
+    if path.is_symlink():
+        raise SystemExit(f'Public license resources must be regular files: {relative}')
+    if path.is_file():
+        destination = target / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(path, destination)
+        destination.chmod(0o644)
+PY
 if [[ "$BUILD_PROFILE" == "full" ]]; then
 python3 - "$PROJECT_ROOT/Vendor/WebTools" "$STAGING_APP/Contents/Resources/WebTools" <<'PY'
 from pathlib import Path

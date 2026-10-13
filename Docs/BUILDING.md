@@ -22,7 +22,7 @@ SILICONPLAYER_BUILD_PROFILE=core bash scripts/build_app.sh
 
 `scripts/bootstrap_media_tools.py` 是完整开发依赖准备脚本，默认会同时准备 Whisper 和语音模型；当前没有独立的 core 依赖一键下载流程。仅为构建日常版时，不应把该命令当作轻量依赖安装入口。
 
-因此，当前说明提供的是**受控依赖已就绪后的构建入口**，尚未承诺新克隆可以完全自动复现最终成品。公开安装包与对应源码在 [v0.6.0-core Release](https://github.com/RGB-hengzhi/SiliconPlayer/releases/tag/v0.6.0-core) 同页提供。
+因此，当前说明提供的是**受控依赖已就绪后的构建入口**，尚未承诺新克隆可以完全自动复现最终成品。公开安装包与对应源码在 [v0.6.1-core Release](https://github.com/RGB-hengzhi/SiliconPlayer/releases/tag/v0.6.1-core) 同页提供。
 
 ## 测试
 
@@ -39,3 +39,9 @@ SILICONPLAYER_BUILD_PROFILE=core bash scripts/build_app.sh
 本项目原创部分采用 GPL-3.0-or-later，第三方文件保留原许可。公开 Release 同页提供应用与实际依赖对应源码、定制补丁、构建与打包控制材料。下载两个源码资产后先阅读其中 README / REBUILD，再准备受控依赖。记录式重放器已做语法与计划检查，尚未重跑从零全链构建；新工具链编译的结果需要重新验证。
 
 公开安装包的许可资源注入、外层签名和 ZIP 往返校验控制脚本见 [repack_public_bundle.py](../scripts/repack_public_bundle.py)。该步骤不重新编译功能代码；其输出校验值与旧封存 ZIP 不同。完整应用源码资产另含原302构建输入和成品构建控制器。
+
+## 0.6.1 日常版构建步骤
+
+`scripts/build_app.sh` 的 core 输出是初始编译产物，仍使用已锁定的 IINA bootstrap 依赖。正式成品须继续执行对应源码包中的构建控制步骤：复制实际 44 个兼容运行库与 FFmpeg / FFprobe，逐个核对 `Resources/PublicLicenses/runtime-to-source.json`，写入真实来源记录，再签名和核验完整应用。不能把初始产物或普通 bootstrap 当作已经通过实际运行库验收的发行版。
+
+新版本的 GPL 原文和 134 项法律资源纳入构建输入校验；缺失资源时构建会停止。成品构建与运行测试分别记录，旧版本通过的测试不计作新版的结果。

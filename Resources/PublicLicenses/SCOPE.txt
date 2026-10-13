@@ -1,0 +1,27 @@
+SiliconPlayer — GPL public distribution scope
+
+Original SiliconPlayer code:
+Copyright (C) 2026 RGB-hengzhi (SiliconPlayer).
+Licensed under GNU GPL version 3 or any later version (GPL-3.0-or-later).
+The complete, unmodified GNU GPLv3 text is supplied as LICENSE.
+
+Third-party source and libraries retain their original copyright notices
+and license terms. mpv API headers retain their original ISC terms; those
+header permissions do not change the license of linked playback libraries.
+The playback combination includes GPL components and follows a GPLv3
+compatible source-distribution route. No proprietary alternative license
+is claimed or needed for uses covered by the existing GPL terms.
+
+Corresponding source must match the actual distributed build and include
+required dependency source, local patches and build/package scripts.
+Refer to NOTICE, THIRD_PARTY and SOURCE_LINKS for the exact release assets
+and source inventory. Upstream home-page links alone are not a substitute.
+
+The initial IINA-derived bootstrap and any former LOCAL GPL PROTOTYPE
+marking describe historical development. Current distribution notices and
+the exact corresponding-source inventory accompany the public release.
+IINA's UI, executable and Sparkle updater are not included.
+
+This application is not an official PotPlayer product. It is not App Store
+certified or Apple-notarized. ad-hoc signature verification does not imply
+Apple notarization or licensing clearance for a different distribution route.

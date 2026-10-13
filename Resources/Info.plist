@@ -81,9 +81,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.6.0</string>
+	<string>0.6.1</string>
 	<key>CFBundleVersion</key>
-	<string>13</string>
+	<string>14</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSArchitecturePriority</key>
@@ -97,7 +97,7 @@
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>SiliconPlayer local GPL prototype. Bundled playback dependencies require a full source and license audit before distribution.</string>
+	<string>Copyright © 2026 RGB-hengzhi. GPL-3.0-or-later. Third-party copyrights and licenses are preserved.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>在你主动开启采集音频时，将麦克风声音加入录制。</string>
 	<key>NSPrincipalClass</key>

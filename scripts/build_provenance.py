@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def inputs(profile="full"):
     files = [ROOT / "Package.swift"]
+    files.extend(ROOT / name for name in ("LICENSE", "NOTICE.md", "THIRD_PARTY.md")
+                 if (ROOT / name).is_file())
     for name in ("Sources", "Tests", "scripts", "Resources"):
         files.extend(p for p in (ROOT / name).rglob("*") if p.is_file()
                      and not any(part.startswith("._") for part in p.relative_to(ROOT).parts)

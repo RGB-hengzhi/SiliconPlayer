@@ -1,0 +1,29 @@
+SiliconPlayer 0.6.1-core — Corresponding Source
+
+Original SiliconPlayer code:
+Copyright (C) 2026 RGB-hengzhi (SiliconPlayer).
+GNU GPL version 3 or later (GPL-3.0-or-later).
+Third-party components retain their original notices and license terms.
+
+Release page:
+https://github.com/RGB-hengzhi/SiliconPlayer/releases/tag/v0.6.1-core
+
+Corresponding application source and build scripts for this version:
+https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.1-core/SiliconPlayer-0.6.1-core-application-source.zip
+
+Dependency source, local patches and build materials:
+https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.0-core/SiliconPlayer-0.6.0-core-dependency-source.zip
+
+Release checksums:
+https://github.com/RGB-hengzhi/SiliconPlayer/releases/download/v0.6.1-core/SHA256SUMS.txt
+
+Project repository:
+https://github.com/RGB-hengzhi/SiliconPlayer
+
+This application version is freshly built from its archived application
+source. Its playback libraries and media tools are the exact byte-preserved
+closure distributed with 0.6.0, whose dependency source archive is linked
+above. Functional tests for each version are recorded separately; results
+from an earlier application build are not inherited. Source assets include
+actual dependency versions, local patches and build/package scripts and are
+offered at no additional charge alongside the application download.

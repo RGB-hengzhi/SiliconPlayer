@@ -528,7 +528,13 @@ final class SessionVerifier {
         if mode == "persistence-write" {
             guard player.loaded else { if attempts > 25 { finish(extra: ["failure": "persistence media load timed out"]) }; return }
             if phase == 0 {
+                // Save a non-first selection: otherwise restoration that always
+                // picks row zero would satisfy the two-launch fixture.
+                if let last = player.playlist.items.last, player.playlist.currentItem?.id != last.id {
+                    player.select(last.id); return
+                }
                 player.settings.theme = "light"; player.settings.cacheMB = 256; player.settings.subtitleSize = 42
+                player.settings.autoplay = false
                 player.settings.equalizer = EqualizerPreset.voice.gains; player.settings.equalizerEnabled = true
                 player.applySettings(); player.set("pause", "yes"); player.seek(8)
                 phase = 1; return
@@ -542,20 +548,36 @@ final class SessionVerifier {
             if mode == "corrupt-profile" {
                 checks["corruptSettingsDefaulted"] = player.settings == PlaybackSettings()
                 checks["corruptQueueEmpty"] = player.playlist.items.isEmpty
+                checks["corruptWelcomeNotRestored"] = !player.restoredQueueOnStartup
                 checks["corruptLibraryReported"] = player.library.lastError != nil && player.library.bookmarks.isEmpty
                 checks["corruptHistoryReported"] = player.history.lastError != nil
                 if let path = ProcessInfo.processInfo.environment["SILICONPLAYER_VERIFY_SECOND"] { player.open([URL(fileURLWithPath: path)]) }
             } else {
                 checks["queueRestoredWithoutAutoplay"] = !player.loaded && !player.isLoading && player.playlist.items.count == 2
-                checks["preferencesRestored"] = player.settings.theme == "light" && player.settings.cacheMB == 256 && player.settings.subtitleSize == 42 && player.settings.equalizerEnabled && player.settings.equalizer == EqualizerPreset.voice.gains
+                checks["restoredWelcomeAvailable"] = player.restoredQueueOnStartup && !player.loaded && !player.isLoading
+                checks["restoredSessionIdle"] = player.flag("idle-active") && !player.loaded && !player.isLoading
+                checks["restoredSelectedSecondItem"] = player.playlist.items.count == 2 && player.playlist.currentIndex == 1
+                    && player.playlist.currentItem?.id == player.playlist.items[1].id
+                checks["restoredSelectedID"] = player.playlist.currentItem?.id.uuidString ?? ""
+                checks["restoredSelectedURL"] = player.currentURL?.absoluteString ?? ""
+                checks["restoredHistoryTarget"] = player.currentURL.flatMap { player.history.resumePosition(for: $0) } ?? -1
+                checks["preferencesRestored"] = player.settings.theme == "light" && player.settings.cacheMB == 256 && player.settings.subtitleSize == 42 && player.settings.equalizerEnabled && player.settings.equalizer == EqualizerPreset.voice.gains && !player.settings.autoplay
                 checks["libraryRestored"] = player.library.bookmarks.count == 1 && player.library.favorites.count == 1 && player.library.savedPlaylists.first?.name == "完整测试课程" && abs((player.library.bookmarks.first?.position ?? 0) - 8) < 0.1
-                player.playSelected()
+                // Same explicit action as the visible Continue button; it must
+                // start playing despite the saved autoplay=false preference.
+                player.togglePause()
             }
             phase = 1; return
         }
         guard player.loaded else { if attempts > 25 { finish(extra: ["failure": "restored profile could not play"]) }; return }
         checks["resumePosition"] = player.position
         checks["restoredEqualizerFilters"] = player.jsonProperty("af") ?? []
+        if mode == "persistence-read" {
+            checks["continueConsumedRestoreMarker"] = !player.restoredQueueOnStartup
+            checks["continuePreservedSelection"] = player.playlist.currentItem?.id.uuidString == checks["restoredSelectedID"] as? String
+                && player.currentURL?.absoluteString == checks["restoredSelectedURL"] as? String
+            checks["continuePlayingWithoutChangingAutoplay"] = !player.flag("pause") && !player.settings.autoplay
+        }
         player.set("pause", "yes"); finish(extra: ["profilePlayable": true])
     }
     private func verifyRecovery() {

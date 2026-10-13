@@ -1,0 +1,628 @@
+{
+  "schema": 1,
+  "fileCount": 124,
+  "bytes": 753749,
+  "files": [
+    {
+      "path": "BROTLI/LICENSE",
+      "bytes": 1084,
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+    },
+    {
+      "path": "DAV1D/COPYING",
+      "bytes": 1317,
+      "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5"
+    },
+    {
+      "path": "DAV1D/doc/PATENTS",
+      "bytes": 5730,
+      "sha256": "335eca574598bf4ca181b12f708d6669e5a5e78c8e1513e5b35fa1f03901484b"
+    },
+    {
+      "path": "FFMPEG/COPYING.GPLv2",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "FFMPEG/COPYING.GPLv3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "FFMPEG/COPYING.LGPLv2.1",
+      "bytes": 26517,
+      "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30"
+    },
+    {
+      "path": "FFMPEG/COPYING.LGPLv3",
+      "bytes": 7651,
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "path": "FFMPEG/LICENSE.md",
+      "bytes": 4346,
+      "sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af"
+    },
+    {
+      "path": "FFMPEG/doc/authors.texi",
+      "bytes": 403,
+      "sha256": "fb5fac6dd8f7474033e933814491a8297d8723c52be4dcbcc82eef9c4f008dd2"
+    },
+    {
+      "path": "FONTCONFIG/AUTHORS",
+      "bytes": 62,
+      "sha256": "db6d73a160bb2de10268f88ef60aae91771fefdeee4992b791c76ce6592a4a4b"
+    },
+    {
+      "path": "FONTCONFIG/COPYING",
+      "bytes": 8616,
+      "sha256": "51a51aa9823704fd90bccc616cdd17ebabb5b2b3e9cbde886ca02c7002288067"
+    },
+    {
+      "path": "FONTCONFIG/CaseFolding.txt.copyright.txt",
+      "bytes": 271,
+      "sha256": "55108b7efdecb90afea99bec4f989057300d648589ef69e3b15e0dab60b26dd9"
+    },
+    {
+      "path": "FONTCONFIG/UNICODE-LICENSE-V3.txt",
+      "bytes": 1995,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    {
+      "path": "FREETYPE/LICENSE.TXT",
+      "bytes": 2149,
+      "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+    },
+    {
+      "path": "FREETYPE/docs/FTL.TXT",
+      "bytes": 6743,
+      "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f"
+    },
+    {
+      "path": "FREETYPE/docs/GPLv2.TXT",
+      "bytes": 17994,
+      "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+    },
+    {
+      "path": "FREETYPE/include/freetype/freetype.h.copyright-license.txt",
+      "bytes": 2802,
+      "sha256": "941bb1ddae5ed37bd18fb36ae3c4b907d8f3fffc7ec91fb6de52a5e536416e89"
+    },
+    {
+      "path": "FREETYPE/include/freetype/internal/fthash.h.copyright-license.txt",
+      "bytes": 1232,
+      "sha256": "5285d96f6aa3188193d5fbefd8710ed6a46af185e0a43817c17acee5f4b1ab3d"
+    },
+    {
+      "path": "FREETYPE/src/autofit/ft-hb-decls.h.copyright-license.txt",
+      "bytes": 1148,
+      "sha256": "9eb9395c70e884f61081775892fae5949ad7762461bea5753dc5478b0c080302"
+    },
+    {
+      "path": "FREETYPE/src/autofit/ft-hb-ft.c.copyright-license.txt",
+      "bytes": 1148,
+      "sha256": "9eb9395c70e884f61081775892fae5949ad7762461bea5753dc5478b0c080302"
+    },
+    {
+      "path": "FREETYPE/src/autofit/ft-hb-types.h.copyright-license.txt",
+      "bytes": 1148,
+      "sha256": "9eb9395c70e884f61081775892fae5949ad7762461bea5753dc5478b0c080302"
+    },
+    {
+      "path": "FREETYPE/src/autofit/hb-script-list.h.copyright-license.txt",
+      "bytes": 1197,
+      "sha256": "260cfd522bf354ed9c2666777db248c0608e8c7a4110c672f16100aca98c772d"
+    },
+    {
+      "path": "FREETYPE/src/base/fthash.c.copyright-license.txt",
+      "bytes": 1232,
+      "sha256": "5285d96f6aa3188193d5fbefd8710ed6a46af185e0a43817c17acee5f4b1ab3d"
+    },
+    {
+      "path": "FREETYPE/src/bdf/README",
+      "bytes": 5972,
+      "sha256": "7984455e7e5a9faba3797c8bf095fbe10cc846316b7320aff8c58402e22b82fe"
+    },
+    {
+      "path": "FREETYPE/src/gzip/zlib.h.copyright-license.txt",
+      "bytes": 1328,
+      "sha256": "02421fcfbfb1d656ef0b6ff4cd3c39f2946f08c3219fa42db482add7ce1f53ea"
+    },
+    {
+      "path": "FREETYPE/src/pcf/README",
+      "bytes": 3311,
+      "sha256": "18d9782898d9eac04476e2f744678137b2a889689ed3e923e052fc396a86f86b"
+    },
+    {
+      "path": "FRIBIDI/AUTHORS",
+      "bytes": 1640,
+      "sha256": "cb173f55c9514c8f38f4647ac3fedd5f8611358d331e65ab955da931e826861c"
+    },
+    {
+      "path": "FRIBIDI/COPYING",
+      "bytes": 26440,
+      "sha256": "32434afcc8666ba060e111d715bfdb6c2d5dd8a35fa4d3ab8ad67d8f850d2f2b"
+    },
+    {
+      "path": "HARFBUZZ/AUTHORS",
+      "bytes": 201,
+      "sha256": "19bfe8f5ed100636cd24ab0c90a3f71c21d8b02d9ba00719447a0faab364d49f"
+    },
+    {
+      "path": "HARFBUZZ/COPYING",
+      "bytes": 1971,
+      "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64"
+    },
+    {
+      "path": "HARFBUZZ/src/ms-use/COPYING",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "JPEG_TURBO/LICENSE.md",
+      "bytes": 5622,
+      "sha256": "e10114e6e40f3d0311c401ca25245ac5ef459a43c20f976fd63f03e816f5741f"
+    },
+    {
+      "path": "JPEG_TURBO/README.ijg",
+      "bytes": 12799,
+      "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6"
+    },
+    {
+      "path": "JXL-third_party-brotli/LICENSE",
+      "bytes": 1084,
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+    },
+    {
+      "path": "JXL-third_party-googletest/LICENSE",
+      "bytes": 1475,
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+    },
+    {
+      "path": "JXL-third_party-highway/LICENSE",
+      "bytes": 11356,
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+    },
+    {
+      "path": "JXL-third_party-highway/LICENSE-BSD3",
+      "bytes": 1515,
+      "sha256": "d25e82e26acd42ca3ccc9993622631163425b869b9e16284226d534cff6470f2"
+    },
+    {
+      "path": "JXL-third_party-lcms/AUTHORS",
+      "bytes": 999,
+      "sha256": "e4bb09b7cb67c8d9bb342de6c5e01e4729b0c2c4aeefdd78186f25c8724ac7dd"
+    },
+    {
+      "path": "JXL-third_party-lcms/LICENSE",
+      "bytes": 1080,
+      "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31"
+    },
+    {
+      "path": "JXL-third_party-lcms/utils/jpgicc/LICENSE_iccjpeg",
+      "bytes": 3234,
+      "sha256": "8baac37d14eed89b82ffcb041677dd701164eb5cc0f26e165fe47eb11afa0dca"
+    },
+    {
+      "path": "JXL-third_party-libjpeg-turbo/LICENSE.md",
+      "bytes": 5213,
+      "sha256": "60c756742db3ad1913304e8b13f0e86e22e51adb50cc0b3333c163f7e45ceec1"
+    },
+    {
+      "path": "JXL-third_party-libjpeg-turbo/README.ijg",
+      "bytes": 12732,
+      "sha256": "4b7b9f8c03bb8d60270dfd12684e70ab21e4abfd27e73905cd1a7c4cae6f5cdb"
+    },
+    {
+      "path": "JXL-third_party-libpng/AUTHORS",
+      "bytes": 1467,
+      "sha256": "cb3a8e25c2b418d6b23af682d2ff850e67ba0785caa83531f746af62bcb4c6dd"
+    },
+    {
+      "path": "JXL-third_party-libpng/LICENSE",
+      "bytes": 5345,
+      "sha256": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a"
+    },
+    {
+      "path": "JXL-third_party-sjpeg/AUTHORS",
+      "bytes": 423,
+      "sha256": "a92601cf6c7c62a101c11fa350c2da1d01ee33bf0ae01471f23f75f0a2271492"
+    },
+    {
+      "path": "JXL-third_party-sjpeg/COPYING",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "JXL-third_party-skcms/LICENSE",
+      "bytes": 1635,
+      "sha256": "e59bb5c5c6ba426a9ac4ba9fe667ad14c5166b12aa25be8af1d122b14fbe2e36"
+    },
+    {
+      "path": "JXL-third_party-zlib/LICENSE",
+      "bytes": 1002,
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    {
+      "path": "LIBARCHIVE/BLAKE2-APACHE-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LIBARCHIVE/COPYING",
+      "bytes": 3089,
+      "sha256": "30e556b3959e3985d66efefec5eaac51d4995053caa1d3cffe6eb916f146f229"
+    },
+    {
+      "path": "LIBARCHIVE/archive_blake2.h.copyright-license.txt",
+      "bytes": 601,
+      "sha256": "5ab6d278f56c4131eb9140cee98c386192b04beb9b61c8d9dd27090b06b4a99d"
+    },
+    {
+      "path": "LIBARCHIVE/archive_read_support_filter_compress.c.copyright-license.txt",
+      "bytes": 3112,
+      "sha256": "977e4f8fc7e4a4825c63d75e09351b016bd71c268d97b9cc926eabd001c12ff4"
+    },
+    {
+      "path": "LIBARCHIVE/archive_write_add_filter_compress.c.copyright-license.txt",
+      "bytes": 3113,
+      "sha256": "16c181887d692d7369d3388bfb632f8663f626a3b0c98a3a9a0bbaf5282a8303"
+    },
+    {
+      "path": "LIBASS/COPYING",
+      "bytes": 755,
+      "sha256": "f7e30699d02798351e7f839e3d3bfeb29ce65e44efa7735c225464c4fd7dfe9c"
+    },
+    {
+      "path": "LIBBLURAY/COPYING",
+      "bytes": 24478,
+      "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d"
+    },
+    {
+      "path": "LIBBLURAY/contrib/asm/LICENSE.txt",
+      "bytes": 1598,
+      "sha256": "293b6af371eee28b0ff16f0334ea19e20a3d5522143faa4b95b346855507879a"
+    },
+    {
+      "path": "LIBBLURAY/contrib/libudfread/COPYING",
+      "bytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "path": "LIBBS2B/AUTHORS",
+      "bytes": 137,
+      "sha256": "041675ab19852dda585cafa2a8cc0840fc96e5feb750ea981d8e057f4165ed24"
+    },
+    {
+      "path": "LIBBS2B/COPYING",
+      "bytes": 1059,
+      "sha256": "dfd5a8d7dc501447bf0d58b0fc9ef85ab9e713963d7dcf459897adefa4c710ca"
+    },
+    {
+      "path": "LIBBS2B/src/bs2b.c.copyright-license.txt",
+      "bytes": 1124,
+      "sha256": "4cc9c098c7d37c2416659cab5e62a847758a8eed9c70dd78164df1b394d5be53"
+    },
+    {
+      "path": "LIBBS2B/src/bs2b.h.copyright-license.txt",
+      "bytes": 1124,
+      "sha256": "4cc9c098c7d37c2416659cab5e62a847758a8eed9c70dd78164df1b394d5be53"
+    },
+    {
+      "path": "LIBJXL/AUTHORS",
+      "bytes": 3381,
+      "sha256": "00be88a8e3275f8f52a147ecede84c11900fd3180f88478d7cc9f55acabf3a35"
+    },
+    {
+      "path": "LIBJXL/LICENSE",
+      "bytes": 1508,
+      "sha256": "8405932022a556380c2d8c272eff154a923feb197233f348ce5f7334fb0a5ede"
+    },
+    {
+      "path": "LIBJXL/PATENTS",
+      "bytes": 1333,
+      "sha256": "91915f8ae056a68a3c5bdf05d9f6f78bb6903e27a8ca3a8434c9e4ac87300575"
+    },
+    {
+      "path": "LIBJXL/lib/extras/LICENSE.apngdis",
+      "bytes": 1017,
+      "sha256": "4319c422c3bf10168877a83cd9ff848684b9e53dce9a68de0a3f454a825933f6"
+    },
+    {
+      "path": "LIBJXL/third_party/HEVCSoftware/cfg/LICENSE",
+      "bytes": 1744,
+      "sha256": "44a2c5f2ce34d00a30554a44d3e51377852f84bc183dc1b9fb2b48ece976ebef"
+    },
+    {
+      "path": "LIBOGG/AUTHORS",
+      "bytes": 198,
+      "sha256": "6fcb33d0cdd60b5054e7df820916388b590427514288c2bab01c626bb8ae9506"
+    },
+    {
+      "path": "LIBOGG/COPYING",
+      "bytes": 1466,
+      "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814"
+    },
+    {
+      "path": "LIBSOXR/AUTHORS",
+      "bytes": 39,
+      "sha256": "e5d53cd6c716dfeabe47a9f3613a8c6815aa4a67f0f77900787c59445396aeff"
+    },
+    {
+      "path": "LIBSOXR/COPYING.LGPL",
+      "bytes": 26432,
+      "sha256": "f2f118b9029ec1871b953639ecc46651b2fc7b62e295e6cf3ef2ac4c9a058b33"
+    },
+    {
+      "path": "LIBSOXR/LICENCE",
+      "bytes": 1024,
+      "sha256": "dc98676341fdcd29d9f279c9679d6a75288785b174ded8d1b2e316c366166135"
+    },
+    {
+      "path": "LIBSOXR/src/pffft.c.copyright-license.txt",
+      "bytes": 2242,
+      "sha256": "c52a1263204dc55b9c9e5b52834313811618aa9bda9afd918a9d56abac6c031f"
+    },
+    {
+      "path": "LIBUDFREAD/COPYING",
+      "bytes": 26530,
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "path": "LIBUNIBREAK/AUTHORS",
+      "bytes": 697,
+      "sha256": "34e46e31651a6fe15d1a802d7aaa0f349a0529b84d7cf03eb00c96c9f07f789a"
+    },
+    {
+      "path": "LIBUNIBREAK/LICENCE",
+      "bytes": 1045,
+      "sha256": "0c57e2ec42ece17791a75d2f9b2f8e0663181be008667a507f765b3ef22522db"
+    },
+    {
+      "path": "LIBVORBIS/AUTHORS",
+      "bytes": 65,
+      "sha256": "f5cab9f16035f770f50299f85cf2938c06dc3a9a30425961067788102ec896d3"
+    },
+    {
+      "path": "LIBVORBIS/COPYING",
+      "bytes": 1470,
+      "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a"
+    },
+    {
+      "path": "LIBWEBP/AUTHORS",
+      "bytes": 3279,
+      "sha256": "f251be89fd442bd9d701360730aea163cc8e2076ff03528f59267dc2c4f8b60a"
+    },
+    {
+      "path": "LIBWEBP/COPYING",
+      "bytes": 1496,
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+    },
+    {
+      "path": "LIBWEBP/PATENTS",
+      "bytes": 1436,
+      "sha256": "cc3273e0694ea5896145e0677699b53471b03ea43021ddc50e7923fbb9f5023c"
+    },
+    {
+      "path": "LITTLE_CMS2/AUTHORS",
+      "bytes": 1010,
+      "sha256": "4847d97cd41e980794939b1d2694bd8f67b92856ec80e95c2fcfc34066f0df93"
+    },
+    {
+      "path": "LITTLE_CMS2/LICENSE",
+      "bytes": 1080,
+      "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31"
+    },
+    {
+      "path": "LITTLE_CMS2/utils/jpgicc/LICENSE_iccjpeg",
+      "bytes": 3234,
+      "sha256": "8baac37d14eed89b82ffcb041677dd701164eb5cc0f26e165fe47eb11afa0dca"
+    },
+    {
+      "path": "LUAJIT/COPYRIGHT",
+      "bytes": 2935,
+      "sha256": "6cda3076a8c09b31bb1f90da614ea89e7ee194589626eeac613e522849604e47"
+    },
+    {
+      "path": "LZ4/LICENSE",
+      "bytes": 646,
+      "sha256": "4bc9c403f6b679cc076dee210e0e21c27b4e8f6d3fb43d85364c76657bfaaac5"
+    },
+    {
+      "path": "LZ4/lib/LICENSE",
+      "bytes": 1311,
+      "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c"
+    },
+    {
+      "path": "MUJS/AUTHORS",
+      "bytes": 42,
+      "sha256": "d24f0cf75bdfe4e003592fb3eabca1ee8db9698b162e241c081462461eb9369f"
+    },
+    {
+      "path": "MUJS/COPYING",
+      "bytes": 759,
+      "sha256": "0ca9b4fbfbcab8ac7d32475890d866efc02f4cffb6b6da5c0e9a0615cc3d82fe"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4944,
+      "sha256": "54a41668aedc0720159c0a72e3766189cbb93e60a502f583779bd6a4b80551e4"
+    },
+    {
+      "path": "RUBBERBAND/COPYING",
+      "bytes": 30260,
+      "sha256": "cedd4c1885d75991bf1077cc6e33359103cf04fbc996f20d30ab043d5fc5fcc5"
+    },
+    {
+      "path": "RUBBERBAND/rubberband/RubberBandStretcher.h.copyright-license.txt",
+      "bytes": 901,
+      "sha256": "f41db6f40791ca38e259aec2a148657dfe074e21371530f45ba0440514b9a1fb"
+    },
+    {
+      "path": "RUBBERBAND/src/ext/kissfft/COPYING",
+      "bytes": 246,
+      "sha256": "a2840585f8411be8e6826a31ef15ae65c950bd74a2437a73b013398a934ad0c6"
+    },
+    {
+      "path": "RUBBERBAND/src/ext/speex/COPYING",
+      "bytes": 1774,
+      "sha256": "b3da65c2cff5522b5a22438afb1fa99873e6567a2aebb17b198c58b15b09d5f3"
+    },
+    {
+      "path": "SPEEX/AUTHORS",
+      "bytes": 502,
+      "sha256": "6e5a9d92c5f9ccd28fe0b15ad59443fbf435bfc6ab2221f532006d3717ddf642"
+    },
+    {
+      "path": "SPEEX/COPYING",
+      "bytes": 1773,
+      "sha256": "2654a4264b2bfe298dedc508748d140111840c315cc8eb646a3a68c13fa75b01"
+    },
+    {
+      "path": "SPIRV/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "SPIRV/LICENSES/LicenseRef-KhronosFreeUse.txt",
+      "bytes": 1305,
+      "sha256": "fbeaca472f4f70e276dd1106ca5097435967a22ad6c1d8200aef7ad9f70aaf3f"
+    },
+    {
+      "path": "SVT_AV1/LICENSE-BSD2.md",
+      "bytes": 1316,
+      "sha256": "c582fcbeb9cf972a60d298bfaf41dc5adff2dd14208946edcb9bb56a281e8438"
+    },
+    {
+      "path": "SVT_AV1/LICENSE.md",
+      "bytes": 1709,
+      "sha256": "0acc2fcb27472bdc9aaf8b71f37055bbdac4f54671b7d922f241bd7fcd0dd3e6"
+    },
+    {
+      "path": "SVT_AV1/PATENTS.md",
+      "bytes": 5767,
+      "sha256": "20678ab10402659106dc4c147c97b2a6e94b5c0695415e15a8f195ebc3547922"
+    },
+    {
+      "path": "SVT_AV1/third_party/fastfeat/LICENSE",
+      "bytes": 1506,
+      "sha256": "043dcfd059386f9facd376351b2bd79325778744aa442177390cdfcca54babed"
+    },
+    {
+      "path": "SVT_AV1/third_party/safestringlib/LICENSE",
+      "bytes": 2247,
+      "sha256": "c0f99a208799ca20c9ccf31a30533d49334eb458dca5a3d14f9afe3e884e5d7d"
+    },
+    {
+      "path": "UCHARDET/AUTHORS",
+      "bytes": 449,
+      "sha256": "36c52690fb39c9c4d2929577577050f486b5be36acb5c0038339b7b83c892536"
+    },
+    {
+      "path": "UCHARDET/COPYING",
+      "bytes": 70517,
+      "sha256": "107a29ccdd2d778aa2df5462f85dddfa099059abd22e064e07ec2cc9bafc37cd"
+    },
+    {
+      "path": "UCHARDET/src/nsUniversalDetector.h.copyright-license.txt",
+      "bytes": 1715,
+      "sha256": "e9e8d0191f8052c2a3d6193f87cdc7cfbf5e4793eaa43022dd9686286a711a29"
+    },
+    {
+      "path": "UCHARDET/src/uchardet.h.copyright-license.txt",
+      "bytes": 1806,
+      "sha256": "95c9856cbf23f38380746c3c890e6addf98fb688cad2f7a56890089ae89faac0"
+    },
+    {
+      "path": "ZIMG/COPYING",
+      "bytes": 484,
+      "sha256": "7637386b5f81e8a719ca336233149005e5fa28b5e6054ea7b67de49355b0ad40"
+    },
+    {
+      "path": "ZSTD/COPYING",
+      "bytes": 18091,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+    },
+    {
+      "path": "ZSTD/LICENSE",
+      "bytes": 1549,
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+    },
+    {
+      "path": "glslang/LICENSE.txt",
+      "bytes": 54615,
+      "sha256": "17e70c676e1521ff3e4686f04a2053d93a7e28a33be8de7ec37ab0ff72feb677"
+    },
+    {
+      "path": "libplacebo/3rdparty/Vulkan-Headers/LICENSE.md",
+      "bytes": 458,
+      "sha256": "ac24e5ea920e4318e4d02c4086ae51f53cfb03feed06c18df1019e7ada1ec7bc"
+    },
+    {
+      "path": "libplacebo/3rdparty/Vulkan-Headers/LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "libplacebo/3rdparty/Vulkan-Headers/LICENSES/MIT.txt",
+      "bytes": 1084,
+      "sha256": "1ca3502222d967f3be5751c55f6b7ee735b5383909c3b501495f54b216dbf227"
+    },
+    {
+      "path": "libplacebo/3rdparty/fast_float/AUTHORS",
+      "bytes": 36,
+      "sha256": "ed249424bce4e318fa190dd6d8becf60cfc37287132ad3f89e16e0f28d878dcf"
+    },
+    {
+      "path": "libplacebo/3rdparty/fast_float/LICENSE-APACHE",
+      "bytes": 10767,
+      "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06"
+    },
+    {
+      "path": "libplacebo/3rdparty/fast_float/LICENSE-BOOST",
+      "bytes": 1337,
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+    },
+    {
+      "path": "libplacebo/3rdparty/fast_float/LICENSE-MIT",
+      "bytes": 1079,
+      "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+    },
+    {
+      "path": "libplacebo/3rdparty/glad/LICENSE",
+      "bytes": 3014,
+      "sha256": "cbb325cd4ac5bd06717ffa34a322b984f9d285e4c67c8ca1b7380d6ef08c2a77"
+    },
+    {
+      "path": "libplacebo/3rdparty/jinja/LICENSE.txt",
+      "bytes": 1475,
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+    },
+    {
+      "path": "libplacebo/3rdparty/markupsafe/LICENSE.txt",
+      "bytes": 1475,
+      "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+    },
+    {
+      "path": "libplacebo/LICENSE",
+      "bytes": 24478,
+      "sha256": "b3aa400aca6d2ba1f0bd03bd98d03d1fe7489a3bbb26969d72016360af8a5c9d"
+    },
+    {
+      "path": "mpv/Copyright",
+      "bytes": 4096,
+      "sha256": "bfe9ee4cceabcb8ecbfadf208d04156f73d801e6a57369a5606bb8341e204a23"
+    },
+    {
+      "path": "mpv/LICENSE.GPL",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "mpv/LICENSE.LGPL",
+      "bytes": 26410,
+      "sha256": "72b672113d642cbb8ef5dcc76938db801983c56e50b1400ab930f1a64d6dc8d9"
+    }
+  ],
+  "purpose": "Binary documentation; full original third-party grants and complete inline copyright/license blocks"
+}
